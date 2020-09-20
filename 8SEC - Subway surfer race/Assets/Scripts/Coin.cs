@@ -7,6 +7,6 @@ public class Coin : CollectibleObject
 	public int Value;
 	public override void UseBonus(GameObject other)
 	{
-		other.GetComponentInChildren<Score>().AddScore(Value);
+		other.GetComponent<Score>().AddScore(Value);
 	}
 }
