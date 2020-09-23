@@ -9,7 +9,7 @@ public class KillCollider : MonoBehaviour
 		if (other.tag == "Player")
 		{
 
-			other.GetComponent<CarStat>().KillCar();
+			other.GetComponentInParent<CarStat>().KillCar();
 			//other.gameObject.SetActive(false);
 		}
 	}
