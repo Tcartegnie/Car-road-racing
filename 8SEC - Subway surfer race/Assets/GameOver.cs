@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
+	public CarController Carcontroller;
 	public CarStat Carstat;
 	public int ResCost;
 	GameManager GM;
@@ -32,25 +33,29 @@ public class GameOver : MonoBehaviour
 
 	public void RessurectPlayer()
 	{
-		GM.life -= ResCost;
+		Carcontroller.ResetPosition();
 		floorSpawner.ResetPattern();
 		GMUI.DiseableUIGameOver();
 		Carstat.Respawn();
+
+	}
+
+	public void Resume()
+	{
+		RessurectPlayer();
+		GM.life -= ResCost;
 		ResCost += 1;
 	}
 
 	public void ResetGame()
 	{
+		RessurectPlayer();
 		score.ResetScore();
-		floorSpawner.ResetPattern();
-		GMUI.DiseableUIGameOver();
-		Carstat.Respawn();
-
 	}
 
 	public void OnContinueButtonPressed()
 	{
-		RessurectPlayer();
+		Resume();
 	}
 
 	public void OnResetButtonPressed()
