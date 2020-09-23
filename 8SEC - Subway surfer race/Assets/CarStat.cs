@@ -27,7 +27,6 @@ public class CarStat : MonoBehaviour
 
 	public void Respawn()
 	{
-		transform.position = new Vector3(0, 1, 0);
 		Car.gameObject.SetActive(true);
 		Car.transform.position = transform.position;
 		RB.useGravity = true;
