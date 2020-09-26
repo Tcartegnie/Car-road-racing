@@ -11,7 +11,7 @@ public class CarStat : MonoBehaviour
 	public GameObject Car;
 	public GameOverUI UIGameOver;
 	public Score score;
-	public BoxCollider collider;
+	public CapsuleCollider collider;
 	public void Start()
 	{
 		RB = GetComponent<Rigidbody>();
