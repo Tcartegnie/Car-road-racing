@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: PatternList
   m_EditorClassIdentifier: 
   Roads:
-  - {fileID: 11400000, guid: abd21b622831fa742be01721fe7ce75d, type: 2}
-  - {fileID: 11400000, guid: 726f6aab62cbb8242b7b470ad681005a, type: 2}
+  - {fileID: 11400000, guid: 3f4eb7644a92d2f4ea37db32c27bb481, type: 2}
