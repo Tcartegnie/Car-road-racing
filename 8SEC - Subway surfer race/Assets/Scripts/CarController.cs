@@ -26,17 +26,20 @@ public class CarController : MonoBehaviour
 	public AnimationCurve curve;
 
 	public LayerMask GroundLayer;
-	public BoxCollider collider;
+	public CapsuleCollider collider;
 	public Transform Collider;
 
 	public Transform CarTransform;
 
 	bool GravityState;
+	bool IsStraffing;
+
 
 	public void ResetPosition()
 	{
-		Collider.position = new Vector3(0, 1, 0);
-		CarTransform.position = new Vector3(0, 1, 0);
+		transform.position = new Vector3(0,1,0);
+		CarTransform.localPosition = new Vector3();
+		Collider.localPosition = new Vector3();
 	}
 
 	public void MoveOnForward(float direction)
@@ -59,15 +62,17 @@ public class CarController : MonoBehaviour
 
 	public void Straff(int direction)
 	{
-		LaneID += direction;
+		if (!IsStraffing)
+		{
+			LaneID += direction;
 
-		LaneID = Mathf.Clamp(LaneID, 0, 4);
+			LaneID = Mathf.Clamp(LaneID, 0, 4);
 
-		Vector3 FinalDestination = new Vector3(LanePosition[LaneID] * XOffsetIntensity, Collider.position.y, Collider.position.z);
-		Collider.position = FinalDestination;
-	//	transform.position = FinalDestination;
-		StartCoroutine(SmoothSwap(FinalDestination));
-
+			Vector3 FinalDestination = new Vector3(LanePosition[LaneID] * XOffsetIntensity, Collider.position.y, Collider.position.z);
+			Collider.position = FinalDestination;
+			//	transform.position = FinalDestination;
+			StartCoroutine(SmoothSwap(FinalDestination));
+		}
 	}
 
 	public bool IsGrounded()
@@ -121,13 +126,17 @@ public class CarController : MonoBehaviour
 
 	IEnumerator SmoothSwap(Vector3 Destination)
 	{
+		IsStraffing = true;
+
 		Vector3 OriginPos = CarTransform.position;
 		for(float  i = 0; i < 1; i += Time.deltaTime / SwapDuration)
 		{
-			CarTransform.position = Vector3.Lerp(OriginPos,Destination,curve.Evaluate(i));
+			CarTransform.position = Vector3.Lerp(new Vector3(OriginPos.x,CarTransform.position.y, OriginPos.z), new Vector3(Destination.x,CarTransform.position.y,Destination.z),curve.Evaluate(i));
 			yield return null;
 		}
-		CarTransform.position = Vector3.Lerp(OriginPos, Destination, 1);
+		CarTransform.position = Vector3.Lerp(OriginPos, new Vector3(Destination.x, CarTransform.position.y, Destination.z), 1);
+
+		IsStraffing = false;
 	}
 
 
