@@ -5,9 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "RoadPatternList", menuName = "ScriptableObjects/RoadPatternList", order = 1)]
 public class RoadPatternList : ScriptableObject
 {
-	public List<RoadList> Roads;
+	public List<Roads> Roads;
 
-	public RoadList GetRoadPatternList()
+	public Roads GetRandomRoadPattern()
 	{
 		return Roads[Random.Range(0, Roads.Count)];
 	}
