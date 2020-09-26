@@ -11,7 +11,7 @@ public class Road : MonoBehaviour
 	{
 		if(CurrentModel !=null)
 		{
-			CurrentModel.GetComponent<CoinSpawner>().RemoveCoin();
+			CurrentModel.GetComponent<CoinSpawner>().RemoveCoin();//Refacto
 			Destroy(CurrentModel.gameObject);
 		}
 
