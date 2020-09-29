@@ -23,23 +23,30 @@ public class RoadManager
 		CurrentSegementID = 0;
 	}
 
-	public GameObject GetCurrentSegement()
+	GameObject GetCurrentSegement()
 	{
 		return CurrentRoadSegements.Segements[CurrentSegementID];
 	}
 
+	public bool IsPatternEnd()
+	{
+		if(CurrentSegementID >= CurrentRoadSegements.Segements.Count)
+		{
+			return true;
+		}
+		return false;
+	}
+
 	public GameObject GetNextSegement()
 	{
-		if(CurrentSegementID < CurrentRoadSegements.Segements.Count)
-		{
-			GameObject GO = CurrentRoadSegements.Segements[CurrentSegementID];
-			CurrentSegementID++;
-			return GO;
-		}
-		else
+		if(IsPatternEnd())
 		{
 			GetNewRoadList();
+			
 		}
-		return new GameObject();
+		GameObject GO = GetCurrentSegement();
+		GO.name = GetCurrentSegement().name; 
+		CurrentSegementID++;
+		return GO;
 	}
 }
