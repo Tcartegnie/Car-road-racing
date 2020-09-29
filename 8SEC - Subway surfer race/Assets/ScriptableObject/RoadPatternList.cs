@@ -6,9 +6,13 @@ using UnityEngine;
 public class RoadPatternList : ScriptableObject
 {
 	public List<Roads> Roads;
+	int LastPatternID = -1;
 
 	public Roads GetRandomRoadPattern()
 	{
-		return Roads[Random.Range(0, Roads.Count)];
+		LastPatternID = Random.Range(0, Roads.Count);
+
+		return Roads[LastPatternID];
+			
 	}
 }
