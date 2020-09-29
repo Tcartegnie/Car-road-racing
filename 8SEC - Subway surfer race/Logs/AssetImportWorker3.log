@@ -1,0 +1,1303 @@
+Using pre-set license
+Built from 'trunk' branch; Version is '2020.2.0b2 (90b2443a8df1) revision 9482820'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'fr' Physical Memory: 12233 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+F:\Unity\Unity Editor\2020.2.0b2\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Projects/Pro/Test technique/8SEC - Subway Surfer Race/8SEC---Subway-surfer/8SEC - Subway surfer race
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+56329
+Successfully changed project path to: C:/Projects/Pro/Test technique/8SEC - Subway Surfer Race/8SEC---Subway-surfer/8SEC - Subway surfer race
+C:/Projects/Pro/Test technique/8SEC - Subway Surfer Race/8SEC---Subway-surfer/8SEC - Subway surfer race
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 65.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.0b2 (90b2443a8df1)
+[Subsystems] Discovering subsystems at path F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Projects/Pro/Test technique/8SEC - Subway Surfer Race/8SEC---Subway-surfer/8SEC - Subway surfer race/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 770 (ID=0x1184)
+    Vendor:   
+    VRAM:     2007 MB
+    Driver:   26.21.14.3200
+Initialize mono
+Mono path[0] = 'F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/Managed'
+Mono path[1] = 'F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56620
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001655 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 51.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.198 seconds
+Registering precompiled user dll's ...
+Registered in 0.104110 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invalid AssetDatabase path: /Editor/EditorResources/cm_logo_sm.png. Use path relative to the project folder.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:LoadAssetAtPath<UnityEngine.Texture2D> (string)
+Cinemachine.Editor.CinemachineSettings:get_CinemachineLogoTexture () (at Library/PackageCache/com.unity.cinemachine@2.6.3/Editor/Windows/CinemachineSettings.cs:205)
+Cinemachine.Editor.CinemachineSettings:.cctor () (at Library/PackageCache/com.unity.cinemachine@2.6.3/Editor/Windows/CinemachineSettings.cs:237)
+Cinemachine.CinemachineColliderPrefs:.cctor () (at Library/PackageCache/com.unity.cinemachine@2.6.3/Editor/Windows/CinemachineColliderPrefs.cs:61)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.cinemachine@2.6.3/Editor/Windows/CinemachineSettings.cs line 205]
+
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.382 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1273 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 66.1 MB.
+System memory in use after: 66.2 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1717.
+Total: 2.845100 ms (FindLiveObjects: 0.715500 ms CreateObjectMapping: 0.087200 ms MarkObjects: 1.958200 ms  DeleteObjects: 0.082200 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/Coin.cs
+  artifactKey: Guid(78143bfd15e0eb0418e72a2339c4a2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Coin.cs using Guid(78143bfd15e0eb0418e72a2339c4a2c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14ddcbecf0a16b5448ecd44874ef90bb') in 0.107787 seconds
+  Import took 0.112717 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001743 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 63.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.684 seconds
+Registering precompiled user dll's ...
+Registered in 0.165749 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.610 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 40.5 MB.
+System memory in use after: 40.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1722.
+Total: 3.091200 ms (FindLiveObjects: 0.591900 ms CreateObjectMapping: 0.079200 ms MarkObjects: 2.388900 ms  DeleteObjects: 0.029900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1534.866160 seconds.
+  path: Assets/Prefab/Road/MediumPattern/PatterLongRoad5.prefab
+  artifactKey: Guid(e1be264c66ff61648a63e54792148e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/MediumPattern/PatterLongRoad5.prefab using Guid(e1be264c66ff61648a63e54792148e7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19b1122fcd2a03438ecf5d3fa8a21730') in 0.381044 seconds
+  Import took 0.386188 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016774 seconds.
+  path: Assets/Prefab/Road/MediumPattern/PatternRoad1.prefab
+  artifactKey: Guid(9d28fe7a88cbece48a5f2f81cf25a8c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/MediumPattern/PatternRoad1.prefab using Guid(9d28fe7a88cbece48a5f2f81cf25a8c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '364145f032f4567d6017a9a949f72681') in 0.126696 seconds
+  Import took 0.140813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/Prefab/Road/MediumPattern/PatternLongRoad4.prefab
+  artifactKey: Guid(5152363db042df543ad7869a91ef6406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/MediumPattern/PatternLongRoad4.prefab using Guid(5152363db042df543ad7869a91ef6406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b12100a4c2a149ed28ee63accc8a5993') in 0.055310 seconds
+  Import took 0.060449 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000390 seconds.
+  path: Assets/Prefab/Road/MediumPattern/PatterRoadCorridor1.prefab
+  artifactKey: Guid(dcc3f947f6abc784681dce35ec81efd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/MediumPattern/PatterRoadCorridor1.prefab using Guid(dcc3f947f6abc784681dce35ec81efd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40b8131c61d576fbfb8c85545242712a') in 0.040064 seconds
+  Import took 0.045160 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/Prefab/Road/MediumPattern/PatternLongRoad4.prefab
+  artifactKey: Guid(5152363db042df543ad7869a91ef6406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/MediumPattern/PatternLongRoad4.prefab using Guid(5152363db042df543ad7869a91ef6406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b12100a4c2a149ed28ee63accc8a5993') in 0.024129 seconds
+  Import took 0.030644 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Prefab/Road/MediumPattern/PatterRoadCorridor2.prefab
+  artifactKey: Guid(cc0c4f0df601ca44da08ba3f13e38357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/MediumPattern/PatterRoadCorridor2.prefab using Guid(cc0c4f0df601ca44da08ba3f13e38357) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c5c4b0fc0065af49a1aa0784ea11cd4') in 0.054029 seconds
+  Import took 0.059610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Prefab/Road/MediumPattern/PatterRoad3.prefab
+  artifactKey: Guid(024573faa0614fd4383bb5656f9c59bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/MediumPattern/PatterRoad3.prefab using Guid(024573faa0614fd4383bb5656f9c59bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eb149eb16c4b465e1e29bbf5f1cb6b9') in 0.044168 seconds
+  Import took 0.048449 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.202827 seconds.
+  path: Assets/ScriptableObject/Road pattern/TestRoadsCoins.asset
+  artifactKey: Guid(49eb5f956aacc6542ba2e0ed89b40382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road pattern/TestRoadsCoins.asset using Guid(49eb5f956aacc6542ba2e0ed89b40382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d14d7b34dad3bbcc09af5a2329ec872') in 0.017115 seconds
+  Import took 0.021360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.548455 seconds.
+  path: Assets/ScriptableObject/Road segement/Test
+  artifactKey: Guid(c39931a857fbcbb46ac0a59d587ea28f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road segement/Test using Guid(c39931a857fbcbb46ac0a59d587ea28f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fc089484d525f59745b05160b573aaf') in 0.011676 seconds
+  Import took 0.018933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.986152 seconds.
+  path: Assets/ScriptableObject/Road segement/Test/CoinsTest.asset
+  artifactKey: Guid(a8b44175b70c20a499935b65f4030b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road segement/Test/CoinsTest.asset using Guid(a8b44175b70c20a499935b65f4030b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3307b1c6cfb4d6a7d6fb529bf28e2a62') in 0.013638 seconds
+  Import took 0.017742 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.678222 seconds.
+  path: Assets/sleepers/Prefabs/Block.prefab
+  artifactKey: Guid(2c6eaf835861a0e4ca2edeecc05cb65b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/sleepers/Prefabs/Block.prefab using Guid(2c6eaf835861a0e4ca2edeecc05cb65b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91393c6fc9ac714244103b13fb0c8736') in 0.422487 seconds
+  Import took 0.430996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/sleepers/Prefabs/Hav_shpala.prefab
+  artifactKey: Guid(0fd14bda8731dcd4a87bf848102cd602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/sleepers/Prefabs/Hav_shpala.prefab using Guid(0fd14bda8731dcd4a87bf848102cd602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '092cbd4989b738749c9ebd57e1eaca25') in 0.181225 seconds
+  Import took 0.186108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/sleepers/Prefabs/FloorBlocks.prefab
+  artifactKey: Guid(e9151b03259fcc049a8cd76143a51348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/sleepers/Prefabs/FloorBlocks.prefab using Guid(e9151b03259fcc049a8cd76143a51348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '425633dc65d0bc6455377589f7844500') in 0.091327 seconds
+  Import took 0.096787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000391 seconds.
+  path: Assets/Prefab/Road/EasyPattern/CentraleLine0.prefab
+  artifactKey: Guid(32aefbb8e675503419364c4926238d3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/EasyPattern/CentraleLine0.prefab using Guid(32aefbb8e675503419364c4926238d3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76238ca6fcdbfb0a43b077eb018a33f8') in 0.067112 seconds
+  Import took 0.071956 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000366 seconds.
+  path: Assets/sleepers/Prefabs/floor_block.prefab
+  artifactKey: Guid(e61e391e34ed1284a826842e1dd83249) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/sleepers/Prefabs/floor_block.prefab using Guid(e61e391e34ed1284a826842e1dd83249) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e467b162ba4ac55ea4dd9865f787cc2') in 0.034410 seconds
+  Import took 0.038615 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/Prefab/Road/EasyPattern/CentraleLine0.prefab
+  artifactKey: Guid(32aefbb8e675503419364c4926238d3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/EasyPattern/CentraleLine0.prefab using Guid(32aefbb8e675503419364c4926238d3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76238ca6fcdbfb0a43b077eb018a33f8') in 0.023739 seconds
+  Import took 0.028494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Prefab/Road/EasyPattern/CoinLaneCenter3.prefab
+  artifactKey: Guid(4a7bddbddec4c6442975919c00afab4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/EasyPattern/CoinLaneCenter3.prefab using Guid(4a7bddbddec4c6442975919c00afab4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '301101b883184db1262ef379e2b11307') in 0.045381 seconds
+  Import took 0.050342 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000318 seconds.
+  path: Assets/sleepers/Prefabs/New shpala.prefab
+  artifactKey: Guid(2904e86f6c685ee45aa5bb5652e35c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/sleepers/Prefabs/New shpala.prefab using Guid(2904e86f6c685ee45aa5bb5652e35c10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '386a99d4cbd8c3c58482515844df869a') in 0.036147 seconds
+  Import took 0.041071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.611136 seconds.
+  path: Assets/Prefab/Road/MediumPattern/PatterRoadHight.prefab
+  artifactKey: Guid(a97ec133472888f40be7f60094ff7549) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/MediumPattern/PatterRoadHight.prefab using Guid(a97ec133472888f40be7f60094ff7549) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6a4f0cdac71cfd981e7a2edec54d918') in 0.120280 seconds
+  Import took 0.125568 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Prefab/Road/MediumPattern/RoadLongLane3.prefab
+  artifactKey: Guid(cbde66d0a54dcf34b85b688f3f83cae5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/MediumPattern/RoadLongLane3.prefab using Guid(cbde66d0a54dcf34b85b688f3f83cae5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbf65fdf0d58ffc6e53fce9a63eb772f') in 0.041617 seconds
+  Import took 0.050780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.941767 seconds.
+  path: Assets/ScriptableObject/Road segement/Test/CoinsTest.asset
+  artifactKey: Guid(a8b44175b70c20a499935b65f4030b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road segement/Test/CoinsTest.asset using Guid(a8b44175b70c20a499935b65f4030b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a1c0695f4ae8ca8e15ffacc55aff1c5') in 0.041809 seconds
+  Import took 0.101171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.958863 seconds.
+  path: Assets/Prefab/Road/MediumPattern/PatterRoad2.prefab
+  artifactKey: Guid(2ac69b6f2c1abda418c57323f1a473c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/MediumPattern/PatterRoad2.prefab using Guid(2ac69b6f2c1abda418c57323f1a473c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36d0eee81733cd631f431c7245e59dbe') in 0.033743 seconds
+  Import took 0.038762 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.439196 seconds.
+  path: Assets/Prefab/Road/MediumPattern/PatterRoad2.prefab
+  artifactKey: Guid(2ac69b6f2c1abda418c57323f1a473c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Road/MediumPattern/PatterRoad2.prefab using Guid(2ac69b6f2c1abda418c57323f1a473c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36d0eee81733cd631f431c7245e59dbe') in 0.025467 seconds
+  Import took 0.030744 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001686 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 61.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.893 seconds
+Registering precompiled user dll's ...
+Registered in 0.152918 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.487 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 44.9 MB.
+System memory in use after: 45.0 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1735.
+Total: 2.384900 ms (FindLiveObjects: 0.569400 ms CreateObjectMapping: 0.074900 ms MarkObjects: 1.716800 ms  DeleteObjects: 0.022400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.199117 seconds.
+  path: Assets/ScriptableObject/Road list pattern/PatternList.asset
+  artifactKey: Guid(1c06ad4ce718acc4fbea956699c60326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road list pattern/PatternList.asset using Guid(1c06ad4ce718acc4fbea956699c60326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cb94fb53e34b8085f43d21270b0203f') in 0.066000 seconds
+  Import took 0.070639 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001863 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 57.86 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.721 seconds
+Registering precompiled user dll's ...
+Registered in 0.166087 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.619 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.0 MB.
+System memory in use after: 45.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1739.
+Total: 3.689100 ms (FindLiveObjects: 0.739300 ms CreateObjectMapping: 0.124000 ms MarkObjects: 2.781100 ms  DeleteObjects: 0.024200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.888011 seconds.
+  path: Assets/ScriptableObject/Road pattern/TestRoadsCoins.asset
+  artifactKey: Guid(49eb5f956aacc6542ba2e0ed89b40382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road pattern/TestRoadsCoins.asset using Guid(49eb5f956aacc6542ba2e0ed89b40382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42e4ba1e9af140b35f89afbe799be110') in 0.020172 seconds
+  Import took 0.024845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004419 seconds.
+  path: Assets/ScriptableObject/Road pattern/TestRoadsCoins.asset
+  artifactKey: Guid(49eb5f956aacc6542ba2e0ed89b40382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road pattern/TestRoadsCoins.asset using Guid(49eb5f956aacc6542ba2e0ed89b40382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42e4ba1e9af140b35f89afbe799be110') in 0.005481 seconds
+  Import took 0.009440 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.351348 seconds.
+  path: Assets/ScriptableObject/Road pattern/TestRoadsCoins.asset
+  artifactKey: Guid(49eb5f956aacc6542ba2e0ed89b40382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road pattern/TestRoadsCoins.asset using Guid(49eb5f956aacc6542ba2e0ed89b40382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7adfb81e52577da78a72b4aff7098cd8') in 0.020475 seconds
+  Import took 0.027003 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001491 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 49.65 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.459 seconds
+Registering precompiled user dll's ...
+Registered in 0.100026 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.455 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.1 MB.
+System memory in use after: 45.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1743.
+Total: 2.777700 ms (FindLiveObjects: 0.768100 ms CreateObjectMapping: 0.093100 ms MarkObjects: 1.898100 ms  DeleteObjects: 0.017100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 97.126324 seconds.
+  path: Assets/Prefab/Coin.prefab
+  artifactKey: Guid(3d12602baa2b7c9479b6a955ae3d46a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Coin.prefab using Guid(3d12602baa2b7c9479b6a955ae3d46a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '015eeba52b7f1fea006193a3c3ffa1d5') in 0.136241 seconds
+  Import took 0.140632 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001485 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 54.68 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.589 seconds
+Registering precompiled user dll's ...
+Registered in 0.117121 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.533 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.2 MB.
+System memory in use after: 45.3 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1748.
+Total: 2.476400 ms (FindLiveObjects: 0.598500 ms CreateObjectMapping: 0.078100 ms MarkObjects: 1.750000 ms  DeleteObjects: 0.048400 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001581 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 55.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.649 seconds
+Registering precompiled user dll's ...
+Registered in 0.163297 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.549 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.3 MB.
+System memory in use after: 45.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1752.
+Total: 3.659500 ms (FindLiveObjects: 0.639100 ms CreateObjectMapping: 0.077200 ms MarkObjects: 2.916700 ms  DeleteObjects: 0.025100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1081.760747 seconds.
+  path: Assets/ScriptableObject/Road segement/Test/CoinsTest.asset
+  artifactKey: Guid(a8b44175b70c20a499935b65f4030b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road segement/Test/CoinsTest.asset using Guid(a8b44175b70c20a499935b65f4030b9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15d3dcf992e9046f7e4226e99e51bf0c') in 0.035506 seconds
+  Import took 0.041487 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001797 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 65.67 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.182 seconds
+Registering precompiled user dll's ...
+Registered in 0.140338 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.950 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.4 MB.
+System memory in use after: 45.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1756.
+Total: 3.267000 ms (FindLiveObjects: 0.657500 ms CreateObjectMapping: 0.095400 ms MarkObjects: 2.489900 ms  DeleteObjects: 0.022700 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001824 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 57.03 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.935 seconds
+Registering precompiled user dll's ...
+Registered in 0.126845 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.858 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.5 MB.
+System memory in use after: 45.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1760.
+Total: 2.807000 ms (FindLiveObjects: 0.668100 ms CreateObjectMapping: 0.079200 ms MarkObjects: 2.039800 ms  DeleteObjects: 0.018800 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001323 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 51.73 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.765 seconds
+Registering precompiled user dll's ...
+Registered in 0.100199 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.705 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.5 MB.
+System memory in use after: 45.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1764.
+Total: 2.999000 ms (FindLiveObjects: 0.971300 ms CreateObjectMapping: 0.153700 ms MarkObjects: 1.853300 ms  DeleteObjects: 0.018900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 122.968117 seconds.
+  path: Assets/ScriptableObject/Road list pattern/PatternList.asset
+  artifactKey: Guid(1c06ad4ce718acc4fbea956699c60326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road list pattern/PatternList.asset using Guid(1c06ad4ce718acc4fbea956699c60326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46a1b0361e107486225c479dc46d7d5b') in 0.032056 seconds
+  Import took 0.039701 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.784065 seconds.
+  path: Assets/ScriptableObject/Road list pattern/PatternList.asset
+  artifactKey: Guid(1c06ad4ce718acc4fbea956699c60326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road list pattern/PatternList.asset using Guid(1c06ad4ce718acc4fbea956699c60326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46a1b0361e107486225c479dc46d7d5b') in 0.019624 seconds
+  Import took 0.024906 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001405 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 49.70 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.785 seconds
+Registering precompiled user dll's ...
+Registered in 0.105242 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.659 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.6 MB.
+System memory in use after: 45.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1768.
+Total: 3.066000 ms (FindLiveObjects: 0.593300 ms CreateObjectMapping: 0.075300 ms MarkObjects: 2.271400 ms  DeleteObjects: 0.106300 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001320 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 52.76 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.895 seconds
+Registering precompiled user dll's ...
+Registered in 0.104353 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.750 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.7 MB.
+System memory in use after: 45.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1772.
+Total: 3.113800 ms (FindLiveObjects: 1.050200 ms CreateObjectMapping: 0.110400 ms MarkObjects: 1.933900 ms  DeleteObjects: 0.018000 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001365 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 62.64 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.960 seconds
+Registering precompiled user dll's ...
+Registered in 0.099690 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.858 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.66 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.8 MB.
+System memory in use after: 45.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1776.
+Total: 2.409200 ms (FindLiveObjects: 0.621800 ms CreateObjectMapping: 0.079900 ms MarkObjects: 1.688100 ms  DeleteObjects: 0.017600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 344.839650 seconds.
+  path: Assets/ScriptableObject/Road segement/Easy segement/EmptyRoad.asset
+  artifactKey: Guid(417ef4907f4d6b149b4d1a8f95461f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road segement/Easy segement/EmptyRoad.asset using Guid(417ef4907f4d6b149b4d1a8f95461f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00df07844dbf05b929d858c20b7b1aee') in 0.037817 seconds
+  Import took 0.042327 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.644911 seconds.
+  path: Assets/ScriptableObject/Road segement/Easy segement/EmptyRoad.asset
+  artifactKey: Guid(417ef4907f4d6b149b4d1a8f95461f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road segement/Easy segement/EmptyRoad.asset using Guid(417ef4907f4d6b149b4d1a8f95461f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00df07844dbf05b929d858c20b7b1aee') in 0.008020 seconds
+  Import took 0.013098 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001624 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 59.15 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.464 seconds
+Registering precompiled user dll's ...
+Registered in 0.133047 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.957 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.9 MB.
+System memory in use after: 46.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1780.
+Total: 3.031800 ms (FindLiveObjects: 0.671700 ms CreateObjectMapping: 0.076300 ms MarkObjects: 2.258200 ms  DeleteObjects: 0.023900 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001496 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 55.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.020 seconds
+Registering precompiled user dll's ...
+Registered in 0.111761 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.896 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 46.0 MB.
+System memory in use after: 46.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1784.
+Total: 2.773200 ms (FindLiveObjects: 0.667000 ms CreateObjectMapping: 0.107700 ms MarkObjects: 1.976700 ms  DeleteObjects: 0.019900 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001468 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 53.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.097 seconds
+Registering precompiled user dll's ...
+Registered in 0.100768 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.007 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 46.1 MB.
+System memory in use after: 46.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1788.
+Total: 3.122500 ms (FindLiveObjects: 0.712800 ms CreateObjectMapping: 0.086300 ms MarkObjects: 2.298800 ms  DeleteObjects: 0.022700 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001466 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 57.34 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.098 seconds
+Registering precompiled user dll's ...
+Registered in 0.109523 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.003 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 46.2 MB.
+System memory in use after: 46.3 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1792.
+Total: 2.637500 ms (FindLiveObjects: 0.670500 ms CreateObjectMapping: 0.084100 ms MarkObjects: 1.858600 ms  DeleteObjects: 0.022700 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001413 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 50.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.042 seconds
+Registering precompiled user dll's ...
+Registered in 0.098891 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.919 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 46.3 MB.
+System memory in use after: 46.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1796.
+Total: 2.583300 ms (FindLiveObjects: 0.639800 ms CreateObjectMapping: 0.079100 ms MarkObjects: 1.844500 ms  DeleteObjects: 0.018700 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001306 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 51.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.090 seconds
+Registering precompiled user dll's ...
+Registered in 0.112865 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.077 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 46.4 MB.
+System memory in use after: 46.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1800.
+Total: 3.282300 ms (FindLiveObjects: 0.808100 ms CreateObjectMapping: 0.097400 ms MarkObjects: 2.355700 ms  DeleteObjects: 0.019200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 379.960082 seconds.
+  path: Assets/ScriptableObject/Road segement/Easy segement/Line.asset
+  artifactKey: Guid(dbbda138605d9444db970614cef6b653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObject/Road segement/Easy segement/Line.asset using Guid(dbbda138605d9444db970614cef6b653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b578da1110039f4ab7f7733d60a7c57d') in 0.039153 seconds
+  Import took 0.045978 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001315 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 50.84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.167 seconds
+Registering precompiled user dll's ...
+Registered in 0.101509 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.022 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 46.5 MB.
+System memory in use after: 46.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1804.
+Total: 2.985500 ms (FindLiveObjects: 0.593900 ms CreateObjectMapping: 0.146600 ms MarkObjects: 2.211200 ms  DeleteObjects: 0.032200 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001371 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 56.43 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.237 seconds
+Registering precompiled user dll's ...
+Registered in 0.104413 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.067 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 46.6 MB.
+System memory in use after: 46.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1808.
+Total: 2.339000 ms (FindLiveObjects: 0.583500 ms CreateObjectMapping: 0.083000 ms MarkObjects: 1.655100 ms  DeleteObjects: 0.016300 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001445 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 53.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.283 seconds
+Registering precompiled user dll's ...
+Registered in 0.098301 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.192 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 46.7 MB.
+System memory in use after: 46.8 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1812.
+Total: 2.609800 ms (FindLiveObjects: 0.807000 ms CreateObjectMapping: 0.118300 ms MarkObjects: 1.663500 ms  DeleteObjects: 0.019200 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001325 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 51.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.356 seconds
+Registering precompiled user dll's ...
+Registered in 0.099538 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.190 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.8 MB.
+System memory in use after: 45.9 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1816.
+Total: 2.494900 ms (FindLiveObjects: 0.673600 ms CreateObjectMapping: 0.086000 ms MarkObjects: 1.715900 ms  DeleteObjects: 0.017800 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001586 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 53.81 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.436 seconds
+Registering precompiled user dll's ...
+Registered in 0.098230 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.389 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 45.9 MB.
+System memory in use after: 46.0 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1820.
+Total: 2.798500 ms (FindLiveObjects: 0.800000 ms CreateObjectMapping: 0.117400 ms MarkObjects: 1.855300 ms  DeleteObjects: 0.024000 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: F:/Unity/Unity Editor/2020.2.0b2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001712 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 51.59 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.428 seconds
+Registering precompiled user dll's ...
+Registered in 0.104093 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Projects\Pro\Test technique\8SEC - Subway Surfer Race\8SEC---Subway-surfer\8SEC - Subway surfer race\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.307 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 46.0 MB.
+System memory in use after: 46.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1824.
+Total: 2.714200 ms (FindLiveObjects: 0.607900 ms CreateObjectMapping: 0.075400 ms MarkObjects: 2.004500 ms  DeleteObjects: 0.024600 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
