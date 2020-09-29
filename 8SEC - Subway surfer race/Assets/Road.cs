@@ -11,13 +11,13 @@ public class Road : MonoBehaviour
 	{
 		if(CurrentModel !=null)
 		{
-			CurrentModel.GetComponent<CoinSpawner>().RemoveCoin();//Refacto
+			//CurrentModel.GetComponent<CoinSpawner>().RemoveCoin();//Refacto
 			Destroy(CurrentModel.gameObject);
 		}
 
 		CurrentModel = Instantiate(roadPreafb, SpawnRoad,false);
-		CurrentModel.GetComponent<CoinSpawner>().SpawnCoins();
-		CurrentModel.GetComponent<CoinSpawner>().SpawnBonus();
+		//CurrentModel.GetComponent<CoinSpawner>().SpawnCoins();
+		//CurrentModel.GetComponent<CoinSpawner>().SpawnBonus();
 	}
 
 }
