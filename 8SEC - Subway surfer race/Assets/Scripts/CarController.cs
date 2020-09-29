@@ -127,7 +127,7 @@ public class CarController : MonoBehaviour
 	IEnumerator SmoothSwap(Vector3 Destination)
 	{
 		IsStraffing = true;
-
+		RB.useGravity = false;
 		Vector3 OriginPos = CarTransform.position;
 		for(float  i = 0; i < 1; i += Time.deltaTime / SwapDuration)
 		{
@@ -135,7 +135,7 @@ public class CarController : MonoBehaviour
 			yield return null;
 		}
 		CarTransform.position = Vector3.Lerp(OriginPos, new Vector3(Destination.x, CarTransform.position.y, Destination.z), 1);
-
+		RB.useGravity = true;
 		IsStraffing = false;
 	}
 
