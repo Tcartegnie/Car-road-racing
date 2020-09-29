@@ -8,14 +8,15 @@ public class ChronoStartGame : MonoBehaviour
 	public FloorSpawner FloorSpawner;
 	public CarStat state;
 	public float StartTime;
-
+	GameManager GM;
 	public void Start()
 	{
-	
+		GM = GameManager.instance;
 	}
 
 	public void StartChrono()
 	{
+		GM.OnPause = true;
 		FloorSpawner.InitSpawn();
 		StartCoroutine(StartScreen());
 	}
@@ -24,7 +25,8 @@ public class ChronoStartGame : MonoBehaviour
 	{
 		state.InitCar();
 		ChronoStartScreen.TurnOff();
-		FloorSpawner.SpanwCamionEnable = true;
+		GM.OnPause = false;
+		FloorSpawner.SpawnCamionEnable = true;
 	}
 
 	IEnumerator StartScreen()
