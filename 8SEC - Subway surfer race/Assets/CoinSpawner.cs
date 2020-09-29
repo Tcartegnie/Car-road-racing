@@ -12,7 +12,7 @@ public class CoinSpawner : MonoBehaviour
 
 	List<GameObject> CurrentObjects = new List<GameObject>();
 	public int CoinNumber;
-	public int SpaceBetweenCoin;
+	public float SpaceBetweenCoin;
 	public List<Transform> CoinsSpawners = new List<Transform>();
 	public List<Transform> BonusSpawner = new List<Transform>();
 
@@ -21,22 +21,22 @@ public class CoinSpawner : MonoBehaviour
 	public void Start()
 	{
 		SpawnCoins();
-		SpawnBonus();
+		//SpawnBonus();
 	}
 
-	public void SpawnBonus()
-	{
-		for (int i = 0; i < BonusSpawner.Count; i++)
-		{
-			BonusData data = bonusList.GetRandomBonus();
-			if (Random.Range(0, data.RandomRate) == 1)
-			{
-				GameObject GO = ObjectPooler.instance.SpawnFromPool("Bonus" + data.Name, new Vector3(BonusSpawner[i].position.x, BonusSpawner[i].position.y, BonusSpawner[i].position.z), new Quaternion());
-				GO.transform.SetParent(transform, true);
-				CurrentObjects.Add(GO);
-			}
-		}
-	}
+	//public void SpawnBonus()
+	//{
+	//	for (int i = 0; i < BonusSpawner.Count; i++)
+	//	{
+	//		BonusData data = bonusList.GetRandomBonus();
+	//		if (Random.Range(0, data.RandomRate) == 1)
+	//		{
+	//			GameObject GO = ObjectPooler.instance.SpawnFromPool("Bonus" + data.Name, new Vector3(BonusSpawner[i].position.x, BonusSpawner[i].position.y, BonusSpawner[i].position.z), new Quaternion());
+	//			GO.transform.SetParent(transform, true);
+	//			CurrentObjects.Add(GO);
+	//		}
+	//	}
+	//}
 
 	public void SpawnCoins()
 	{
