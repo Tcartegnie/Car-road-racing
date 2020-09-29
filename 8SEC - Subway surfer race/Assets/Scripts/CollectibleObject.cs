@@ -40,6 +40,9 @@ public class CollectibleObject : MonoBehaviour
 
 
 	public virtual void UseBonus(GameObject other)
+	{}
+
+	void RemoveItem()
 	{
 		gameObject.SetActive(false);
 	}
@@ -50,7 +53,7 @@ public class CollectibleObject : MonoBehaviour
 		transform.SetParent(other.transform,true);
 		UseBonus(other);
 		yield return new WaitForSeconds(TimeOnPlayerTop);
-	
+		RemoveItem();
 	}
 
 
