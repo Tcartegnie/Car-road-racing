@@ -5,16 +5,16 @@ using UnityEngine;
 public class CarStat : MonoBehaviour
 {
 
-	Rigidbody RB;
+	public Rigidbody RB;
 	CarController carController;
 	public bool IsDead;
 	public GameObject Car;
 	public GameOverUI UIGameOver;
 	public Score score;
-	public CapsuleCollider collider;
+	public Collider collider;
 	public void Start()
 	{
-		RB = GetComponent<Rigidbody>();
+		//RB = GetComponent<Rigidbody>();
 		carController = GetComponent<CarController>();
 	}
 

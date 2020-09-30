@@ -20,25 +20,28 @@ public class PlayerInput : MonoBehaviour
 
 	public void Update()
 	{
-		if (Input.GetKeyUp(KeyCode.RightArrow))
+		if (!GM.OnPause)
 		{
-			PlayerCar.Straff(1);
-		}
+			if (Input.GetKeyUp(KeyCode.RightArrow))
+			{
+				PlayerCar.Straff(1);
+			}
 
-		if (Input.GetKeyUp(KeyCode.LeftArrow))
-		{
-			PlayerCar.Straff(-1);
-		}
+			if (Input.GetKeyUp(KeyCode.LeftArrow))
+			{
+				PlayerCar.Straff(-1);
+			}
 
-		if(AccelerationEnable == true)
-		{
-			PlayerCar.MoveOnForward(1);
-		}
-		
+			if (AccelerationEnable == true)
+			{
+				PlayerCar.MoveOnForward(1);
+			}
 
-		if(Input.GetKeyUp(KeyCode.Space))
-		{
-		 	PlayerCar.CallJump();
+
+			if (Input.GetKeyUp(KeyCode.Space))
+			{
+				PlayerCar.CallJump();
+			}
 		}
 	}
 
