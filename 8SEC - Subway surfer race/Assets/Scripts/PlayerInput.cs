@@ -40,7 +40,7 @@ public class PlayerInput : MonoBehaviour
 
 			if (Input.GetKeyUp(KeyCode.Space))
 			{
-				PlayerCar.CallJump();
+				PlayerCar.Jump();
 			}
 		}
 	}
@@ -72,7 +72,7 @@ public class PlayerInput : MonoBehaviour
 	{
 		if (!GM.OnPause)
 		{
-			PlayerCar.CallJump();
+			PlayerCar.Jump();
 		}
 	}
 
