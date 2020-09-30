@@ -26,8 +26,7 @@ public class CarController : MonoBehaviour
 	public AnimationCurve curve;
 
 	public LayerMask GroundLayer;
-	public CapsuleCollider collider;
-	public Transform Collider;
+	public Collider collider;
 
 	public Transform CarTransform;
 
@@ -39,7 +38,6 @@ public class CarController : MonoBehaviour
 	{
 		transform.position = new Vector3(0,1,0);
 		CarTransform.localPosition = new Vector3();
-		Collider.localPosition = new Vector3();
 	}
 
 	public void MoveOnForward(float direction)
@@ -68,8 +66,7 @@ public class CarController : MonoBehaviour
 
 			LaneID = Mathf.Clamp(LaneID, 0, 4);
 
-			Vector3 FinalDestination = new Vector3(LanePosition[LaneID] * XOffsetIntensity, Collider.position.y, Collider.position.z);
-			Collider.position = FinalDestination;
+			Vector3 FinalDestination = new Vector3(LanePosition[LaneID] * XOffsetIntensity, CarTransform.position.y, CarTransform.position.z);
 			//	transform.position = FinalDestination;
 			StartCoroutine(SmoothSwap(FinalDestination));
 		}
@@ -80,12 +77,12 @@ public class CarController : MonoBehaviour
 		return Physics.CheckCapsule(collider.bounds.center, new Vector3(collider.bounds.center.x, collider.bounds.center.y, collider.bounds.center.z), 1f, GroundLayer);
 	}
 
-	public void CallJump()
+	public void Jump()
 	{
+	
 		if (IsGrounded())
 		{
-		//	Collider.position =  new Vector3(Collider.position.x, Collider.position.y, Collider.position.z) + Vector3.up * YOffset;
-			StartCoroutine(Jump());
+			RB.AddForce(Vector3.up * jumpForce);
 		}
 	}
 
@@ -100,29 +97,6 @@ public class CarController : MonoBehaviour
 	{
 		RB.useGravity = GravityState;
 	}
-
-	IEnumerator Jump()
-	{
-		Vector3 OriginPos = CarTransform.position;
-		RB.useGravity = false;
-		for (float i = 0; i < 1; i += Time.deltaTime / JumpDuration)
-		{
-			Vector3 result = Vector3.Lerp(OriginPos, new Vector3(CarTransform.position.x, CarTransform.position.y, CarTransform.position.z) + Vector3.up * YOffset, curve.Evaluate(i));
-			Collider.position = result;
-			CarTransform.position = result;
-			yield return null;
-		}
-		Collider.position = Vector3.Lerp(OriginPos, new Vector3(CarTransform.position.x, CarTransform.position.y, CarTransform.position.z) + Vector3.up * YOffset, 1);
-		CarTransform.position = Vector3.Lerp(OriginPos, new Vector3(CarTransform.position.x, CarTransform.position.y, CarTransform.position.z) + Vector3.up * YOffset, 1);
-		yield return StartCoroutine(Levitate());
-	}
-
-	IEnumerator Levitate()
-	{
-		yield return new WaitForSeconds(AirTime);
-		RB.useGravity = true;
-	}
-
 
 	IEnumerator SmoothSwap(Vector3 Destination)
 	{
