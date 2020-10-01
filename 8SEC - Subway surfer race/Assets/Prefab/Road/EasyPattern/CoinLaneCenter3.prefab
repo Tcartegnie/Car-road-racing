@@ -46,8 +46,21 @@ MonoBehaviour:
   SpaceBetweenCoin: 1
   CoinsSpawners:
   - {fileID: 6921263785477221293}
-  BonusSpawner: []
-  bonusList: {fileID: 0}
+--- !u!114 &5406171504339497208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8465088629347724832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fad2cc12e9a4754a87143dc6416f82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BonusSpawn:
+  - {fileID: 6080146052978252083}
+  bonusList: {fileID: 11400000, guid: c7bb3e6e294b03e42ae45979d57ee0a9, type: 2}
 --- !u!1001 &266178337857071219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -142,7 +155,7 @@ PrefabInstance:
     - target: {fileID: 6924170915895118927, guid: a28978a37f874a64a8e299627de1594b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.1
+      value: -17.57
       objectReference: {fileID: 0}
     - target: {fileID: 6924170915895118927, guid: a28978a37f874a64a8e299627de1594b,
         type: 3}

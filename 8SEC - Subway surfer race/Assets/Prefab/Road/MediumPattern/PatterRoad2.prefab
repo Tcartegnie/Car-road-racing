@@ -77,8 +77,6 @@ MonoBehaviour:
   CoinsSpawners:
   - {fileID: 4668938124224171123}
   - {fileID: 4465956270893147942}
-  BonusSpawner: []
-  bonusList: {fileID: 0}
 --- !u!1001 &3054830978044826946
 PrefabInstance:
   m_ObjectHideFlags: 0
