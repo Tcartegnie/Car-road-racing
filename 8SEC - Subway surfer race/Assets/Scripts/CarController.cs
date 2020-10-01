@@ -33,6 +33,7 @@ public class CarController : MonoBehaviour
 	bool GravityState;
 	bool IsStraffing;
 
+	public CarParticleEmmiter CarParticleEmmiter;
 
 	public void ResetPosition()
 	{
@@ -56,7 +57,10 @@ public class CarController : MonoBehaviour
 		}
 	}
 
-
+	public void PlayExplosion()
+	{
+		CarParticleEmmiter.PlayExplostion();
+	}
 
 	public void Straff(int direction)
 	{
@@ -67,7 +71,7 @@ public class CarController : MonoBehaviour
 			LaneID = Mathf.Clamp(LaneID, 0, 4);
 
 			Vector3 FinalDestination = new Vector3(LanePosition[LaneID] * XOffsetIntensity, CarTransform.position.y, CarTransform.position.z);
-			//	transform.position = FinalDestination;
+			CarParticleEmmiter.PlaySmokeParticle();
 			StartCoroutine(SmoothSwap(FinalDestination));
 		}
 	}

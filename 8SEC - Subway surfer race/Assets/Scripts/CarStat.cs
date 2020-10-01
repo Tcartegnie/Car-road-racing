@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ public class CarStat : MonoBehaviour
 	public GameOverUI UIGameOver;
 	public Score score;
 	public Collider collider;
+	public CarParticleEmmiter CarParticleEmmiter;
+	public ParticlePlayer Explosion;
 	public void Start()
 	{
 		//RB = GetComponent<Rigidbody>();
@@ -27,6 +30,7 @@ public class CarStat : MonoBehaviour
 
 	public void Respawn()
 	{
+		GameManager.instance.OnPause = false;
 		Car.gameObject.SetActive(true);
 		Car.transform.position = transform.position;
 		RB.useGravity = true;
@@ -36,6 +40,19 @@ public class CarStat : MonoBehaviour
 		collider.enabled = true;
 		RB.useGravity = true;
 		IsDead = false;
+	}
+
+	public IEnumerator PlayerGameOver()
+	{
+		GameManager.instance.OnPause = true;
+		ParticlePlayer particle = Instantiate(Explosion,transform.position,new Quaternion());
+		yield return StartCoroutine(particle.PlayOneShoot());
+		KillCar();
+	}
+	
+	public void CallKillCar()
+	{
+		StartCoroutine(PlayerGameOver());
 	}
 
 	public void KillCar()

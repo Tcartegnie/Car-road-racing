@@ -38,10 +38,14 @@ public class PlayerInput : MonoBehaviour
 			}
 
 
-			if (Input.GetKeyUp(KeyCode.Space))
+			if (Input.GetKeyDown(KeyCode.Space))
 			{
 				PlayerCar.Jump();
 			}
+		}
+		if (Input.GetKeyDown(KeyCode.A))
+		{
+			PlayerCar.PlayExplosion();
 		}
 	}
 
