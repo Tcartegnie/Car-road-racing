@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CarParticleEmmiter : MonoBehaviour
 {
+	public Transform carTransform;
     public List<ParticlePlayer> SmokeParticle = new List<ParticlePlayer>();
     public ParticlePlayer ExplosionFX;
+	ParticlePlayer CurrentparticlePlayer;
      // Start is called before the first frame update
     
     public void PlaySmokeParticle()
@@ -18,6 +20,12 @@ public class CarParticleEmmiter : MonoBehaviour
 
     public void PlayExplostion()
 	{
-        ExplosionFX.CallParticlePlay();
+		StartCoroutine(PlayerGameOver());
+	}
+
+	public IEnumerator PlayerGameOver()
+	{
+		CurrentparticlePlayer = Instantiate(ExplosionFX, carTransform.position, new Quaternion());
+		yield return StartCoroutine(CurrentparticlePlayer.PlayOneShoot());
 	}
 }
