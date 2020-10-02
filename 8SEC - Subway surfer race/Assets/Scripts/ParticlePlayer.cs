@@ -8,10 +8,6 @@ public class ParticlePlayer : MonoBehaviour
     public ParticleSystem particle;
 	// Start is called before the first frame update
 
-	public void Start()
-	{
-		particle.Stop();
-	}
 	public void CallParticlePlay()
 	{
         StartCoroutine(PlayParticle());
