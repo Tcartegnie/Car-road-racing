@@ -45,9 +45,11 @@ public class CarStat : MonoBehaviour
 	public IEnumerator PlayerGameOver()
 	{
 		GameManager.instance.OnPause = true;
-		ParticlePlayer particle = Instantiate(Explosion,transform.position,new Quaternion());
-		yield return StartCoroutine(particle.PlayOneShoot());
 		KillCar();
+		yield return StartCoroutine(CarParticleEmmiter.PlayerGameOver());
+		EnableEndGameScreen();
+
+
 	}
 	
 	public void CallKillCar()
@@ -58,11 +60,16 @@ public class CarStat : MonoBehaviour
 	public void KillCar()
 	{
 		Car.gameObject.SetActive(false);
-		UIGameOver.EnableUIGameOver();
+
 		score.Multiplicator = 0;
 		collider.enabled = false;
 		RB.useGravity = false;
 		RB.velocity = Vector3.zero;
 		IsDead = true;
+	}
+
+	public void EnableEndGameScreen()
+	{
+		UIGameOver.EnableUIGameOver();
 	}
 }
