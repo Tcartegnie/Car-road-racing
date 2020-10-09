@@ -22,6 +22,7 @@ public class FloorSpawner : MonoBehaviour
 
 	public void InitSpawn()
 	{
+		TransformRoad.Clear();
 		for (int j = 0; j < SpawnRoadNumber; j++)
 		{
 			GameObject GO = Instantiate(EmptyRoadPattern, RoadSpawnPoint.position + ((Vector3.forward * 20) * j), new Quaternion());
@@ -33,17 +34,24 @@ public class FloorSpawner : MonoBehaviour
 
 	public void ResetPattern()
 	{
+		roadManager.ResetPattern();
 		for (int i = 0; i < TransformRoad.Count; i++)
 		{
-			TransformRoad[i].GetComponent<Road>().ChangeRoadPattern(EmptyRoadPattern);
+			TransformRoad[i].GetComponent<Road>().ChangeRoadPattern(EmptyRoadPattern,RoadSpawnPoint);
 		}
+		
 	}
 
+	public void RestAndStopRoad()
+	{
+		ResetPattern();
+		SpawnCamionEnable = false;
+	}
 
 	public void resetRoadSegement(int segementID)
 	{
 		Road CurrentRoad = TransformRoad[segementID].GetComponent<Road>();
-		CurrentRoad.ChangeRoadPattern(roadManager.GetNextSegement());
+		CurrentRoad.ChangeRoadPattern(roadManager.GetNextSegement(),RoadSpawnPoint);
 		TransformRoad[segementID].transform.position = LastRoad.transform.position + transform.forward * 20;
 		LastRoad = TransformRoad[segementID];
 	}
@@ -54,7 +62,10 @@ public class FloorSpawner : MonoBehaviour
 		{
 			if(TransformRoad[i].transform.position.z < -20)
 			{
-				resetRoadSegement(i);
+				if (SpawnCamionEnable)
+				{
+					resetRoadSegement(i);
+				}
 			}
 		}
 	}
