@@ -49,4 +49,9 @@ public class RoadManager
 		CurrentSegementID++;
 		return GO;
 	}
+
+	public void ResetPattern()
+	{
+		CurrentSegementID = 0;
+	}
 }
