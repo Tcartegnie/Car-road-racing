@@ -9,6 +9,7 @@ public class PlayerInput : MonoBehaviour
 	public CarController PlayerCar;
 	public CarStat PlayerStat;
 	public Vector2 SwipeSensitivity;
+	public CarCinematiqueMovement carCinematiqueMovement;
 	GameManager GM;
 
 	public void Start()
@@ -45,7 +46,7 @@ public class PlayerInput : MonoBehaviour
 		}
 		if (Input.GetKeyDown(KeyCode.A))
 		{
-			PlayerCar.PlayExplosion();
+			carCinematiqueMovement.CallTransition();
 		}
 	}
 
