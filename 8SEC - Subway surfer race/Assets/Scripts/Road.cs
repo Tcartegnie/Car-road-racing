@@ -7,7 +7,8 @@ public class Road : MonoBehaviour
 
 	public Transform SpawnRoad;
 	public GameObject CurrentModel;
-	public void ChangeRoadPattern(GameObject roadPreafb)
+	public GameObject Building;
+	public void ChangeRoadPattern(GameObject roadPrefab, Transform TR)
 	{
 		if(CurrentModel !=null)
 		{
@@ -15,10 +16,11 @@ public class Road : MonoBehaviour
 			{
 				CurrentModel.GetComponent<CoinSpawner>().RemoveCoin();//Refacto
 			}
-			Destroy(CurrentModel.gameObject);
+			Destroy(CurrentModel);
+			//Destroy(Building);
 		}
 
-		CurrentModel = Instantiate(roadPreafb, SpawnRoad,false);
+		CurrentModel = Instantiate(roadPrefab, SpawnRoad);
 		//CurrentModel.GetComponent<CoinSpawner>().SpawnCoins();
 		//CurrentModel.GetComponent<CoinSpawner>().SpawnBonus();
 	}
