@@ -1,14 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ChronoStartGame : MonoBehaviour
 {
-	public ChronoStartScreenUI ChronoStartScreen;
+	public ChronoStartScreen ChronoStartScreen;
 	public FloorSpawner FloorSpawner;
 	public CarStat state;
+	public InGameUI InGameUI;
 	public float StartTime;
 	GameManager GM;
+	public AudioSource ChronoSound;
+	public AudioSource GameMusic;
 	public void Start()
 	{
 		GM = GameManager.instance;
@@ -16,6 +20,7 @@ public class ChronoStartGame : MonoBehaviour
 
 	public void StartChrono()
 	{
+		ChronoStartScreen.TurnOn();
 		GM.OnPause = true;
 		FloorSpawner.InitSpawn();
 		StartCoroutine(StartScreen());
@@ -24,9 +29,10 @@ public class ChronoStartGame : MonoBehaviour
 	void StartGame()
 	{
 		state.InitCar();
-		ChronoStartScreen.TurnOff();
 		GM.OnPause = false;
 		FloorSpawner.SpawnCamionEnable = true;
+		InGameUI.TurnOnUI();
+		GameMusic.Play();
 	}
 
 	IEnumerator StartScreen()
@@ -34,16 +40,19 @@ public class ChronoStartGame : MonoBehaviour
 		yield return StartCoroutine(Chrono());
 		yield return StartCoroutine(ChronoStartScreen.PlayGoScreenDisplay());
 		StartGame();
+		
 	}
-
 	IEnumerator Chrono()
 	{
-		for(float i = StartTime; i >= 0; i-= Time.deltaTime )
+		for(int i = 3; i > 0;i--)
 		{
-			int IntI = (int)i;
-			ChronoStartScreen.SeTChronoText((IntI+1).ToString());
-			yield return null;
+
+			ChronoStartScreen.SeTChronoText((i).ToString());
+			ChronoSound.Play();
+			yield return new WaitForSeconds(1);
+		
 		}
-		ChronoStartScreen.SeTChronoText("0");
+		ChronoStartScreen.SeTChronoText("GO");
+
 	}
 }

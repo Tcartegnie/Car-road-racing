@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class GameOver : MonoBehaviour
 {
@@ -10,18 +11,16 @@ public class GameOver : MonoBehaviour
 	GameManager GM;
 	public FloorSpawner floorSpawner;
 
-	public GameOverUI GMUI;
+	public GameOverUI GameOverUI;
 	public Score score;
-
-
-	public void Start()
-	{
-		GM = GameManager.instance;
-	}
+	public PlayableDirector CameraTransition;
+	public AudioSource GameMusic;
+	public ChronoStartGame chrono;
 
 	public bool IsEnoughtLife()
 	{
-		if (GM.Life >= ResCost)
+	
+		if (GameManager.instance.life >= ResCost)
 		{
 			return true; 
 		}
@@ -33,24 +32,37 @@ public class GameOver : MonoBehaviour
 
 	public void RessurectPlayer()
 	{
-		Carcontroller.ResetPosition();
-		floorSpawner.ResetPattern();
-		GMUI.DiseableUIGameOver();
 		Carstat.Respawn();
-
+		floorSpawner.ResetPattern();
+		GameOverUI.DiseableGameOverUI();
 	}
 
 	public void Resume()
 	{
 		RessurectPlayer();
-		GM.life -= ResCost;
+		GameManager.instance.life -= ResCost;
 		ResCost += 1;
+		chrono.StartChrono();
 	}
 
 	public void ResetGame()
 	{
 		RessurectPlayer();
 		score.ResetScore();
+		chrono.StartChrono();
+	}
+
+	public void ReturnToMainMenu()
+	{
+		floorSpawner.RestAndStopRoad();
+		GameOverUI.DiseableGameOverUI();
+		CameraTransition.Play();
+	}
+
+	public void EnableGameOver()
+	{
+		GameMusic.Stop();
+		GameOverUI.EnableUIGameOver();
 	}
 
 	public void OnContinueButtonPressed()
@@ -63,5 +75,9 @@ public class GameOver : MonoBehaviour
 		ResetGame();
 	}
 
+	public void OnReturnToMainMenuButtonPressed()
+	{
+		ReturnToMainMenu();
+	}
 
 }

@@ -14,9 +14,10 @@ public class GameOverUI : MonoBehaviour
 	public Text LifeCost;
 
 	public Button ContinueButton;
+
 	
 
-	public void Start()
+	public void Awake()
 	{
 		GM = GameManager.instance;
 	}
@@ -28,7 +29,7 @@ public class GameOverUI : MonoBehaviour
 		RefreshUI();
 	}
 
-	public void DiseableUIGameOver()
+	public void DiseableGameOverUI()
 	{
 		UIGameOverRect.SetActive(false);
 	}
