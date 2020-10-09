@@ -4993,8 +4993,8 @@ MonoBehaviour:
   TravellingTime: 0.1
   ObjectHeight: 3
   TimeOnPlayerTop: 1
-  test: {fileID: 8300000, guid: c2c20d81da4fd044f93025f679f9af96, type: 3}
-  CoinNoise: {fileID: 3562078666377143973}
+  sound: {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
+  Audiosource: {fileID: 3562078666377143973}
   Value: 20
 --- !u!135 &3998382789967798151
 SphereCollider:
