@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollectibleObject : MonoBehaviour
 {
 
+
 	GameManager GM;
 
 	public float RotationSpeed;
@@ -14,6 +15,8 @@ public class CollectibleObject : MonoBehaviour
 	public float ObjectHeight;
 	public float TimeOnPlayerTop;
 
+	public AudioClip sound;
+	public AudioSource Audiosource;
 
 	void Update()
 	{
@@ -40,7 +43,9 @@ public class CollectibleObject : MonoBehaviour
 
 
 	public virtual void UseBonus(GameObject other)
-	{}
+	{
+		Audiosource.PlayOneShot(sound);
+	}
 
 	void RemoveItem()
 	{
