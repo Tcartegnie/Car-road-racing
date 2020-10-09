@@ -15,7 +15,7 @@ public class SwapBar : MonoBehaviour
 	public void Update()
 	{
 
-		if (!PlayerStat.IsDead)
+		if (!PlayerStat.IsDead && !GameManager.instance.OnPause)
 		{
 
 			tap = swipeLeft = SwipeRight = SwipeDown = SwipeUp = false;
