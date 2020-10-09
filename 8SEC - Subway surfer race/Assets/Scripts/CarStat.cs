@@ -10,36 +10,54 @@ public class CarStat : MonoBehaviour
 	CarController carController;
 	public bool IsDead;
 	public GameObject Car;
-	public GameOverUI UIGameOver;
+	public GameOver GameOver;
 	public Score score;
 	public Collider collider;
 	public CarParticleEmmiter CarParticleEmmiter;
 	public ParticlePlayer Explosion;
+	public AudioSource EngineSource;
+	public CarCinematiqueMovement carCinematiqueMovement;
 	public void Start()
 	{
 		//RB = GetComponent<Rigidbody>();
 		carController = GetComponent<CarController>();
+		carCinematiqueMovement.CallTransition();
 	}
 
 
 	public void InitCar()
 	{
-		RB.useGravity = true;
+		
 		score.Multiplicator = 1;
+	
+		carController.ResetPosition();
+		EnableCar();
+	}
+
+	public void EnableCar()
+	{
+		RB.useGravity = true;
+		IsDead = false;
+		Car.SetActive(true);
+		collider.enabled = true;
+	}
+
+	public void DiseableCar()
+	{
+		RB.useGravity = false;
+		IsDead = true;
+		Car.SetActive(false);
+		collider.enabled = false;
+		RB.velocity = Vector3.zero;
+
 	}
 
 	public void Respawn()
 	{
-		GameManager.instance.OnPause = false;
-		Car.gameObject.SetActive(true);
-		Car.transform.position = transform.position;
-		RB.useGravity = true;
+		InitCar();
+		GameManager.instance.OnPause = false;	
 		carController.LaneID = 2;
-	
-		score.Multiplicator = 1;
-		collider.enabled = true;
-		RB.useGravity = true;
-		IsDead = false;
+		//EngineSource.Play();
 	}
 
 	public IEnumerator PlayerGameOver()
@@ -48,8 +66,6 @@ public class CarStat : MonoBehaviour
 		KillCar();
 		yield return StartCoroutine(CarParticleEmmiter.PlayerGameOver());
 		EnableEndGameScreen();
-
-
 	}
 	
 	public void CallKillCar()
@@ -59,17 +75,13 @@ public class CarStat : MonoBehaviour
 
 	public void KillCar()
 	{
-		Car.gameObject.SetActive(false);
-
 		score.Multiplicator = 0;
-		collider.enabled = false;
-		RB.useGravity = false;
-		RB.velocity = Vector3.zero;
-		IsDead = true;
+		DiseableCar();
+		//EngineSource.Stop();
 	}
 
 	public void EnableEndGameScreen()
 	{
-		UIGameOver.EnableUIGameOver();
+		GameOver.EnableGameOver();
 	}
 }

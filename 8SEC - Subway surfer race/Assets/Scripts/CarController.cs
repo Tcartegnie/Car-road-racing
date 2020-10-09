@@ -35,6 +35,12 @@ public class CarController : MonoBehaviour
 
 	public CarParticleEmmiter CarParticleEmmiter;
 
+	public AudioClip SkiddingSound;
+	public AudioClip OnAirStraff;
+	public AudioClip JumpSound;
+	public AudioSource SoundSource;
+
+
 	public void ResetPosition()
 	{
 		transform.position = new Vector3(0,1,0);
@@ -55,6 +61,12 @@ public class CarController : MonoBehaviour
 		{
 			transform.position = new Vector3(transform.position.x, transform.position.y, -ZOffset);
 		}
+	}
+
+	
+	public void OnTouchingGround()
+	{
+		SoundSource.Play();
 	}
 
 	public void PlayExplosion()
@@ -83,9 +95,9 @@ public class CarController : MonoBehaviour
 
 	public void Jump()
 	{
-	
 		if (IsGrounded())
 		{
+			SoundSource.PlayOneShot(JumpSound);
 			RB.AddForce(Vector3.up * jumpForce);
 		}
 	}
@@ -102,8 +114,22 @@ public class CarController : MonoBehaviour
 		RB.useGravity = GravityState;
 	}
 
+	public void PlayStraffSound()
+	{
+		if(IsGrounded())
+		{
+			SoundSource.PlayOneShot(OnAirStraff);
+			SoundSource.PlayOneShot(SkiddingSound);
+		}
+		else
+		{
+			SoundSource.PlayOneShot(OnAirStraff);
+		}
+	}
+
 	IEnumerator SmoothSwap(Vector3 Destination)
 	{
+		PlayStraffSound();
 		IsStraffing = true;
 		RB.useGravity = false;
 		Vector3 OriginPos = CarTransform.position;
