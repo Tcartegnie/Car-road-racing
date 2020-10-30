@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096bae13ecbac5b4487aab217a6ef2c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinNumber: 7
-  SpaceBetweenCoin: 0.5
-  CoinsSpawners:
+  Spawns:
   - {fileID: 5311283005780150849}
   - {fileID: 7055482219718564356}
   - {fileID: 1289122248720612209}
+  CoinNumber: 3
+  SpaceBetweenCoin: 5
 --- !u!114 &5678430484551368850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fad2cc12e9a4754a87143dc6416f82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BonusSpawn:
+  Spawns:
   - {fileID: 7028968843337935201}
   - {fileID: 5166025058071906444}
   bonusList: {fileID: 11400000, guid: c7bb3e6e294b03e42ae45979d57ee0a9, type: 2}
@@ -453,17 +453,42 @@ PrefabInstance:
     - target: {fileID: 163998840514725131, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 315477666689499596, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
         type: 3}
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 504883522274422715, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050756422363980534, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2512861257095191134, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173229473150812649, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3513734455484176387, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3733114625618321029, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3768960251663000627, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
         type: 3}
@@ -493,12 +518,12 @@ PrefabInstance:
     - target: {fileID: 5767530757636192424, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6125627979451880321, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6469883158514614090, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
         type: 3}
@@ -506,6 +531,16 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6545910821816043872, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017153993090395021, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337892998072716205, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
         type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -570,6 +605,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8803567640809638245, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8872438617841353868, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
         type: 3}
       propertyPath: CoinsSpawners.Array.size
@@ -624,6 +664,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083369939617535740, guid: 502087b82f4c47746ab8ba9c0b56b0a9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502087b82f4c47746ab8ba9c0b56b0a9, type: 3}

@@ -250,6 +250,10 @@ MonoBehaviour:
   collider: {fileID: 7732396468264334794}
   CarTransform: {fileID: 6041605519954631868}
   CarParticleEmmiter: {fileID: 1134584120}
+  SkiddingSound: {fileID: 0}
+  OnAirStraff: {fileID: 0}
+  JumpSound: {fileID: 0}
+  SoundSource: {fileID: 0}
 --- !u!114 &3303662585633398163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,12 +285,14 @@ MonoBehaviour:
   RB: {fileID: 8588640110037385554}
   IsDead: 0
   Car: {fileID: 7314762706051509935}
-  UIGameOver: {fileID: 0}
+  GameOver: {fileID: 0}
   score: {fileID: 3303662585633398163}
   collider: {fileID: 7732396468264334794}
   CarParticleEmmiter: {fileID: 1134584120}
   Explosion: {fileID: 4726968125805531085, guid: c9d5cd88175043e4682f5575c3340d37,
     type: 3}
+  EngineSource: {fileID: 0}
+  carCinematiqueMovement: {fileID: 0}
 --- !u!114 &1134584120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5299,6 +5305,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8041709860344440592, guid: 54556b1211d714a4696f684f9fc47bdb,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 79492c9bc147c4c478dea3eeb99c4ae4, type: 2}
     - target: {fileID: 8041709860344440593, guid: 54556b1211d714a4696f684f9fc47bdb,
         type: 3}
       propertyPath: playOnAwake
