@@ -33,7 +33,7 @@ public class GameOver : MonoBehaviour
 	public void RessurectPlayer()
 	{
 		Carstat.Respawn();
-		floorSpawner.ResetPattern();
+		//floorSpawner.ResetPattern();
 		GameOverUI.DiseableGameOverUI();
 	}
 
