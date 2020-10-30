@@ -27,9 +27,7 @@ public class CarStat : MonoBehaviour
 
 	public void InitCar()
 	{
-		
 		score.Multiplicator = 1;
-	
 		carController.ResetPosition();
 		EnableCar();
 	}
