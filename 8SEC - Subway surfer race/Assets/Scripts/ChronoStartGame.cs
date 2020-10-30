@@ -22,7 +22,6 @@ public class ChronoStartGame : MonoBehaviour
 	{
 		ChronoStartScreen.TurnOn();
 		GM.OnPause = true;
-		FloorSpawner.InitSpawn();
 		StartCoroutine(StartScreen());
 	}
 
