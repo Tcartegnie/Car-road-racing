@@ -6,8 +6,7 @@ public class CarController : MonoBehaviour
 {
 	public float speed;
 	public float XOffsetIntensity;
-
-	public int LaneID = 2;
+	public int LaneID = 2;//must refacto
 	public int[] LanePosition;
 
 
@@ -40,11 +39,14 @@ public class CarController : MonoBehaviour
 	public AudioClip JumpSound;
 	public AudioSource SoundSource;
 
-
+	public void Start()
+	{
+		ResetPosition();
+	}
 	public void ResetPosition()
 	{
-		transform.position = new Vector3(0,1,0);
-		CarTransform.localPosition = new Vector3();
+		transform.position = new Vector3(0,1.9f,transform.position.z);
+		CarTransform.localPosition = Vector3.zero;
 	}
 
 	public void MoveOnForward(float direction)
