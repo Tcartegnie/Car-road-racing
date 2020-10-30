@@ -4,67 +4,99 @@ using UnityEngine;
 
 public class FloorSpawner : MonoBehaviour
 {
+	public RoadList Roadlist;
 	public GameObject EmptyRoadPattern;
 	public Transform RoadSpawnPoint;
-	public RoadPatternList roadLists;
+	//public RoadPatternList roadLists;
 	public int SpawnRoadNumber;
 	public bool SpawnCamionEnable;
-	RoadManager roadManager;
+	//RoadManager roadManager;
+	public float RoadSpeed;
+	public float RoadDistance;
+
+	public List<Road> Roads = new List<Road>();
+
+	Transform LastRoad;
 
 
-	public List<GameObject> TransformRoad = new List<GameObject>();
-
-	GameObject LastRoad;
-	public void Awake()
+	PatternManager patternManager = new PatternManager();
+	public void Start()
 	{
-		roadManager = new RoadManager(roadLists);
+		patternManager.SetTrainList(Roadlist);
+		InitSpawn();
 	}
 
 	public void InitSpawn()
 	{
-		TransformRoad.Clear();
-		for (int j = 0; j < SpawnRoadNumber; j++)
+		ClearRoad();
+		Roads.Clear();
+		LastRoad = transform;
+		for (int j = 0; j < SpawnRoadNumber-1; j++)
 		{
-			GameObject GO = Instantiate(EmptyRoadPattern, RoadSpawnPoint.position + ((Vector3.forward * 20) * j), new Quaternion());
-			TransformRoad.Add(GO);
-			LastRoad = GO;
+			SpawnNewSegement();
 		}
 	}
 
-
-	public void ResetPattern()
+	public void SpawnNewSegement()
 	{
-		roadManager.ResetPattern();
-		for (int i = 0; i < TransformRoad.Count; i++)
-		{
-			TransformRoad[i].GetComponent<Road>().ChangeRoadPattern(EmptyRoadPattern,RoadSpawnPoint);
-		}
-		
+		GameObject GO; 
+		GO = Instantiate(EmptyRoadPattern);
+		GO.transform.position = LastRoad.transform.position + ((transform.forward * RoadDistance));
+		GO.transform.rotation = new Quaternion();
+		GO.GetComponent<Road>().GenerateBuilding();
+		Roads.Add(GO.GetComponent<Road>());
+		LastRoad = GO.transform;
 	}
+
 
 	public void RestAndStopRoad()
 	{
-		ResetPattern();
 		SpawnCamionEnable = false;
 	}
 
-	public void resetRoadSegement(int segementID)
+	public void ResetRoadSegement(int segementID)
 	{
-		Road CurrentRoad = TransformRoad[segementID].GetComponent<Road>();
-		CurrentRoad.ChangeRoadPattern(roadManager.GetNextSegement(),RoadSpawnPoint);
-		TransformRoad[segementID].transform.position = LastRoad.transform.position + transform.forward * 20;
-		LastRoad = TransformRoad[segementID];
+		ResetRoadPattern(segementID);
+		ResetRoadSegementPosition(segementID);
 	}
+	public void ResetRoadPattern(int segementID)
+	{
+		Road CurrentRoad = Roads[segementID];
+		CurrentRoad.ChangeRoadPattern();
+	}
+
+	public void ResetRoadSegementPosition(int segementID)
+	{
+		Roads[segementID].transform.position = LastRoad.transform.position + transform.forward * RoadDistance;
+		LastRoad = Roads[segementID].transform;
+	}
+
+	public void ClearRoad()
+	{
+		//roadManager.ResetPattern();
+		for (int i = 0; i < Roads.Count; i++)
+		{
+			Roads[i].ClearPattern();
+		}
+	}
+	public void SpawnTrainSegement(Road road)
+	{
+		road.GenerateTrain(patternManager.GetNextSegement());
+	}
+		
 
 	public void Update()
 	{
-		for (int  i = 0;i < TransformRoad.Count;i++)
+		for (int  i = 0;i < Roads.Count;i++)
 		{
-			if(TransformRoad[i].transform.position.z < -20)
+			if(Roads[i].transform.position.z < -RoadSpeed)
 			{
-				if (SpawnCamionEnable)
+				Road road = Roads[i];
+				ResetRoadSegementPosition(i);
+				road.GenerateBuilding();
+				if (!GameManager.instance.OnPause)
 				{
-					resetRoadSegement(i);
+					SpawnTrainSegement(road);
 				}
 			}
 		}

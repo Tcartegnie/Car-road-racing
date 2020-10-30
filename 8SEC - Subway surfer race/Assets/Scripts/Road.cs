@@ -4,25 +4,54 @@ using UnityEngine;
 
 public class Road : MonoBehaviour
 {
+	[SerializeField]
+	CoinGenerator coinGenerator;
+	[SerializeField]
+	BuildingGenerator BuildingGenerator;
+	[SerializeField]
+	BonusGenerator BonusgGenerator;
+	[SerializeField]
+	TrainGenerator TrainGenerator;
 
-	public Transform SpawnRoad;
-	public GameObject CurrentModel;
-	public GameObject Building;
-	public void ChangeRoadPattern(GameObject roadPrefab, Transform TR)
+
+
+	public void ChangeRoadPattern()
 	{
-		if(CurrentModel !=null)
-		{
-			if (CurrentModel.GetComponent<CoinSpawner>())
-			{
-				CurrentModel.GetComponent<CoinSpawner>().RemoveCoin();//Refacto
-			}
-			Destroy(CurrentModel);
-			//Destroy(Building);
-		}
-
-		CurrentModel = Instantiate(roadPrefab, SpawnRoad);
-		//CurrentModel.GetComponent<CoinSpawner>().SpawnCoins();
-		//CurrentModel.GetComponent<CoinSpawner>().SpawnBonus();
+		ClearPattern();
+		ConstructRoad();
 	}
 
+	public void ClearPattern()
+	{
+		coinGenerator.RemoveObject();
+		BuildingGenerator.RemoveObject();
+		BonusgGenerator.RemoveObject();
+	}
+
+
+	public void ConstructRoad()
+	{
+		GenerateBonus();
+		GenerateCoins();
+		GenerateBuilding();	
+	}
+
+	public void GenerateTrain(RoadSegements segement)
+	{
+		TrainGenerator.GenerateTrainSegement(segement);
+	}
+	public void GenerateBonus()
+	{
+		BonusgGenerator.GenerateBonus();
+	}
+
+	public void GenerateCoins()
+	{
+		coinGenerator.GenerateCoins();
+	}
+
+	public void GenerateBuilding()
+	{
+		BuildingGenerator.GenerateBuilding();
+	}
 }
