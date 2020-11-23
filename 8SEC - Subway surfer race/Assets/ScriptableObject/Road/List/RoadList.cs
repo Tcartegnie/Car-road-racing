@@ -22,7 +22,7 @@ public class RoadList : ScriptableObject
 
 	public RoadPattern GetRandomList(SegementDifficulty Difficulty)
 	{
-		 List<RoadPattern> patternByDifficulty = patterns.FindAll(value => value.difficulty == Difficulty);
+		List<RoadPattern> patternByDifficulty = patterns.FindAll(value => value.difficulty == Difficulty);
 		return patternByDifficulty[Random.Range(0, patternByDifficulty.Count)];
 	}
 }
