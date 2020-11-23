@@ -1,14 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class BonusGenerator : ObjectGenerator
 {
-  public void GenerateBonus()
+
+	public BonusList bonus;
+
+
+	public void SetBonusList(BonusList bonusList)
+	{ 
+		bonus = bonusList;
+	}
+
+  public void GenerateBonus(RoadSegements segement)
 	{
-		for (int i = 0; i < Spawns.Count ;i++)
+		for (int i = 0; i < segement.Train.Length;i++)
 		{
-			GenerateObject("BonusHeart", i, new Vector3());
+			if (segement.Bonus[i] != 0)
+			{
+				BonusData data = bonus.GetBonusByID(segement.Bonus[i]); 
+				if (UnityEngine.Random.Range(0, data.RandomRate) == 0)
+				{
+					GenerateObject(data.Name, i, new Vector3());
+				}
+			}
 		}
 	}
 }
