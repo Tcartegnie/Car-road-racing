@@ -11,12 +11,12 @@ TagManager:
   - 
   - Water
   - UI
+  - PostProcessing
   - 
-  - 
-  - Character
-  - 
-  - 
-  - 
+  - Obstacle
+  - Ground
+  - Train
+  - Exposure
   - 
   - 
   - 
