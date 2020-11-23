@@ -7,16 +7,25 @@ public class Road : MonoBehaviour
 	[SerializeField]
 	CoinGenerator coinGenerator;
 	[SerializeField]
-	BuildingGenerator BuildingGenerator;
+	BuildingGenerator buildingGenerator;
 	[SerializeField]
-	BonusGenerator BonusgGenerator;
+	BonusGenerator bonusgGenerator;
 	[SerializeField]
-	TrainGenerator TrainGenerator;
+	TrainGenerator trainGenerator;
 
+	public void InitRaod(Score score)
+	{
+		coinGenerator.Score = score;
+		GenerateBuilding();
+	}
 
-
+	public void SetBonusList(BonusList list)
+	{
+		bonusgGenerator.SetBonusList(list);
+	}
 	public void ChangeRoadPattern()
 	{
+		
 		ClearPattern();
 		ConstructRoad();
 	}
@@ -24,34 +33,35 @@ public class Road : MonoBehaviour
 	public void ClearPattern()
 	{
 		coinGenerator.RemoveObject();
-		BuildingGenerator.RemoveObject();
-		BonusgGenerator.RemoveObject();
+		bonusgGenerator.RemoveObject();
+		trainGenerator.RemoveObject();
 	}
-
+	public void ClearBuilding()
+	{
+		buildingGenerator.RemoveObject();
+	}
 
 	public void ConstructRoad()
 	{
-		GenerateBonus();
-		GenerateCoins();
 		GenerateBuilding();	
 	}
 
 	public void GenerateTrain(RoadSegements segement)
 	{
-		TrainGenerator.GenerateTrainSegement(segement);
+		trainGenerator.GenerateTrainSegement(segement);
 	}
-	public void GenerateBonus()
+	public void GenerateBonus(RoadSegements segement)
 	{
-		BonusgGenerator.GenerateBonus();
+		bonusgGenerator.GenerateBonus(segement);
 	}
 
-	public void GenerateCoins()
+	public void GenerateCoins(RoadSegements segement)
 	{
-		coinGenerator.GenerateCoins();
+		coinGenerator.GenerateCoins(segement);
 	}
 
 	public void GenerateBuilding()
 	{
-		BuildingGenerator.GenerateBuilding();
+		buildingGenerator.GenerateBuilding();
 	}
 }
