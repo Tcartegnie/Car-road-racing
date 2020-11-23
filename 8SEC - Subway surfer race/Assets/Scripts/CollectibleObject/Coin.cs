@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Coin : CollectibleObject
 {
-
+	Score score;
 	public int Value;
+	public int CoinNumber;
+
+	public Score Score { get => score; set => score = value; }
+
 	public override void UseBonus(GameObject other)
 	{
 		base.UseBonus(other);
-		other.GetComponentInParent<Score>().AddScore(Value);
+		Score.AddScoreByMultiplicator(Value);
+		Score.AddCoin(CoinNumber);
 	}
+	
 }
