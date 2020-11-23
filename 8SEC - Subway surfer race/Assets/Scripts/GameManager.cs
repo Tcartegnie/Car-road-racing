@@ -27,4 +27,9 @@ public class GameManager : MonoBehaviour
 		DontDestroyOnLoad(gameObject);
 	}
 
+	public void SetPause(bool onPause)
+	{
+		OnPause = onPause;
+	}
+
 }
