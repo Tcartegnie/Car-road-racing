@@ -21,15 +21,15 @@ public class ChronoStartGame : MonoBehaviour
 	public void StartChrono()
 	{
 		ChronoStartScreen.TurnOn();
-		GM.OnPause = true;
+		GM.SetPause(true);
 		StartCoroutine(StartScreen());
 	}
 
 	void StartGame()
 	{
 		state.InitCar();
-		GM.OnPause = false;
-		FloorSpawner.SpawnCamionEnable = true;
+		GM.SetPause(false);
+		FloorSpawner.EnableRoadPattern();
 		InGameUI.TurnOnUI();
 		GameMusic.Play();
 	}
