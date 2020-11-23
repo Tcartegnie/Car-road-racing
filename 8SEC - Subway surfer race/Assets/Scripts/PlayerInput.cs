@@ -41,12 +41,12 @@ public class PlayerInput : MonoBehaviour
 
 			if (Input.GetKeyDown(KeyCode.Space))
 			{
-				PlayerCar.Jump();
+				CallJump();
 			}
 		}
 		if (Input.GetKeyDown(KeyCode.A))
 		{
-			carCinematiqueMovement.CallTransition();
+			carCinematiqueMovement.CallTransitionIn();
 		}
 	}
 
