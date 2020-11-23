@@ -12,19 +12,24 @@ public class CarStat : MonoBehaviour
 	public GameObject Car;
 	public GameOver GameOver;
 	public Score score;
-	public Collider collider;
+	//public Collider collider;
 	public CarParticleEmmiter CarParticleEmmiter;
 	public ParticlePlayer Explosion;
 	public AudioSource EngineSource;
 	public CarCinematiqueMovement carCinematiqueMovement;
+	GameManager GM;
 	public void Start()
 	{
 		//RB = GetComponent<Rigidbody>();
+		GM = GameManager.Instance();
 		carController = GetComponent<CarController>();
-		carCinematiqueMovement.CallTransition();
+		carCinematiqueMovement.CallTransitionIn();
 	}
 
-
+	public void SetCarInvicible()
+	{
+		
+	}
 	public void InitCar()
 	{
 		score.Multiplicator = 1;
@@ -37,7 +42,7 @@ public class CarStat : MonoBehaviour
 		RB.useGravity = true;
 		IsDead = false;
 		Car.SetActive(true);
-		collider.enabled = true;
+		//collider.enabled = true;
 	}
 
 	public void DiseableCar()
@@ -45,7 +50,7 @@ public class CarStat : MonoBehaviour
 		RB.useGravity = false;
 		IsDead = true;
 		Car.SetActive(false);
-		collider.enabled = false;
+	//	collider.enabled = false;
 		RB.velocity = Vector3.zero;
 
 	}
@@ -53,21 +58,28 @@ public class CarStat : MonoBehaviour
 	public void Respawn()
 	{
 		InitCar();
-		GameManager.instance.OnPause = false;	
+		GM.SetPause(false);
 		carController.LaneID = 2;
 		//EngineSource.Play();
 	}
 
 	public IEnumerator PlayerGameOver()
 	{
-		GameManager.instance.OnPause = true;
+		GM.SetPause(true);
 		KillCar();
-		yield return StartCoroutine(CarParticleEmmiter.PlayerGameOver());
+		yield return StartCoroutine(PlayExplosion());
 		EnableEndGameScreen();
 	}
 	
+	public IEnumerator PlayExplosion()
+	{
+		ParticlePlayer emmiter = CarParticleEmmiter.InstantiateExplosionFX();
+		yield return StartCoroutine(emmiter.PlayOneShoot());
+	}
+
 	public void CallKillCar()
 	{
+		CarParticleEmmiter.StopAllCoroutines();
 		StartCoroutine(PlayerGameOver());
 	}
 
