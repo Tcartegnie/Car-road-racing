@@ -10,7 +10,6 @@ public class BuildingList : ScriptableObject
 	public BuildingPattern GetRandomList()
 	{
 		int PatternsID = Patterns.Count;
-		Debug.Log(PatternsID);
 		return Patterns[Random.Range(0, PatternsID)];
 	}
 }
