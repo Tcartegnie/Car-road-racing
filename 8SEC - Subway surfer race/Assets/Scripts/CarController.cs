@@ -6,8 +6,8 @@ public class CarController : MonoBehaviour
 {
 	public float speed;
 	public float XOffsetIntensity;
-	public int LaneID = 2;//must refacto
-	public int[] LanePosition;
+	public int LaneID = 2;
+	public Transform[] LanePosition;
 
 
 	public float ZLandmarkPosition = 0;
@@ -31,7 +31,7 @@ public class CarController : MonoBehaviour
 
 	bool GravityState;
 	bool IsStraffing;
-
+	public bool OnGround;
 	public CarParticleEmmiter CarParticleEmmiter;
 
 	public AudioClip SkiddingSound;
@@ -43,10 +43,17 @@ public class CarController : MonoBehaviour
 	{
 		ResetPosition();
 	}
+
+	public void Update()
+	{
+	  OnGround = Physics.CheckBox(collider.bounds.center, collider.bounds.extents + Vector3.up, new Quaternion(), GroundLayer);
+	}
+
 	public void ResetPosition()
 	{
-		transform.position = new Vector3(0,1.9f,transform.position.z);
-		CarTransform.localPosition = Vector3.zero;
+		transform.position = new Vector3(LanePosition[2].position.x, 1.9f,transform.position.z);
+		CarTransform.localPosition = new Vector3(LanePosition[2].position.x,CarTransform.localPosition.y,CarTransform.localPosition.z);
+		LaneID = 2;
 	}
 
 	public void MoveOnForward(float direction)
@@ -71,10 +78,6 @@ public class CarController : MonoBehaviour
 		SoundSource.Play();
 	}
 
-	public void PlayExplosion()
-	{
-		CarParticleEmmiter.PlayExplostion();
-	}
 
 	public void Straff(int direction)
 	{
@@ -84,20 +87,20 @@ public class CarController : MonoBehaviour
 
 			LaneID = Mathf.Clamp(LaneID, 0, 4);
 
-			Vector3 FinalDestination = new Vector3(LanePosition[LaneID] * XOffsetIntensity, CarTransform.position.y, CarTransform.position.z);
+			Vector3 FinalDestination = new Vector3(LanePosition[LaneID].position.x, CarTransform.position.y, CarTransform.position.z);
 			CarParticleEmmiter.PlaySmokeParticle();
 			StartCoroutine(SmoothSwap(FinalDestination));
 		}
 	}
 
-	public bool IsGrounded()
-	{
-		return Physics.CheckCapsule(collider.bounds.center, new Vector3(collider.bounds.center.x, collider.bounds.center.y, collider.bounds.center.z), 1f, GroundLayer);
-	}
+	//public bool IsGrounded()
+	//{
+		
+	//}
 
 	public void Jump()
 	{
-		if (IsGrounded())
+		if (OnGround)
 		{
 			SoundSource.PlayOneShot(JumpSound);
 			RB.AddForce(Vector3.up * jumpForce);
@@ -118,7 +121,7 @@ public class CarController : MonoBehaviour
 
 	public void PlayStraffSound()
 	{
-		if(IsGrounded())
+		if(OnGround)
 		{
 			SoundSource.PlayOneShot(OnAirStraff);
 			SoundSource.PlayOneShot(SkiddingSound);
@@ -145,7 +148,7 @@ public class CarController : MonoBehaviour
 		IsStraffing = false;
 	}
 
-
+	
 
 
 }
