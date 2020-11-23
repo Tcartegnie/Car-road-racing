@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjectGenerator : MonoBehaviour
 {
+	
     protected List<GameObject> CurrentObjects = new List<GameObject>();
 	public List<Transform> Spawns = new List<Transform>();
 
