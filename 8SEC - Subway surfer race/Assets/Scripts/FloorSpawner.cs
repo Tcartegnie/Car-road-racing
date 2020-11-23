@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class FloorSpawner : MonoBehaviour
 {
+	public RoadSegements EmptyPattern;
 	public RoadList Roadlist;
+	public BonusList bonusList;
+	public Score score;
+	public DifficultyManager Difficultymanager;
+
+	[Space]
 	public GameObject EmptyRoadPattern;
 	public Transform RoadSpawnPoint;
-	//public RoadPatternList roadLists;
+
+	[Space]
 	public int SpawnRoadNumber;
-	public bool SpawnCamionEnable;
-	//RoadManager roadManager;
+	bool SpawnCamionEnable;
+	bool SpawnCoinEnable;
+	bool SpawnBonusEnable;
+
+	[Space]
 	public float RoadSpeed;
 	public float RoadDistance;
+	public float DistanceMaxFromStart;
 
 	public List<Road> Roads = new List<Road>();
 
@@ -20,6 +31,7 @@ public class FloorSpawner : MonoBehaviour
 
 
 	PatternManager patternManager = new PatternManager();
+	
 	public void Start()
 	{
 		patternManager.SetTrainList(Roadlist);
@@ -43,15 +55,38 @@ public class FloorSpawner : MonoBehaviour
 		GO = Instantiate(EmptyRoadPattern);
 		GO.transform.position = LastRoad.transform.position + ((transform.forward * RoadDistance));
 		GO.transform.rotation = new Quaternion();
-		GO.GetComponent<Road>().GenerateBuilding();
+		GO.GetComponent<Road>().SetBonusList(bonusList);
+		GO.GetComponent<Road>().InitRaod(score);
+		GO.GetComponent<MovingObject>().speed = RoadSpeed;
 		Roads.Add(GO.GetComponent<Road>());
 		LastRoad = GO.transform;
 	}
 
+	public void GetNewRandomPattern()
+	{
+		patternManager.GetNewList();
+	}
+
+	public void SetDifficulty(SegementDifficulty NewDifficulty)
+	{
+		patternManager.CurrentDifficulty = NewDifficulty;
+	}
 
 	public void RestAndStopRoad()
 	{
+		ResetPattern();
 		SpawnCamionEnable = false;
+		SpawnBonusEnable = false;
+		SpawnCoinEnable = false;
+	}
+
+
+	public void EnableRoadPattern()
+	{
+		patternManager.GetNewList();
+		SpawnCamionEnable = true;
+		SpawnBonusEnable = true;
+		SpawnCoinEnable = true;
 	}
 
 	public void ResetRoadSegement(int segementID)
@@ -73,30 +108,64 @@ public class FloorSpawner : MonoBehaviour
 
 	public void ClearRoad()
 	{
-		//roadManager.ResetPattern();
+		
 		for (int i = 0; i < Roads.Count; i++)
 		{
 			Roads[i].ClearPattern();
 		}
 	}
+
+	public void ResetPattern()
+	{
+		ClearRoad();
+		patternManager.ResetPattern();
+	}
+
 	public void SpawnTrainSegement(Road road)
 	{
-		road.GenerateTrain(patternManager.GetNextSegement());
+		if (SpawnCamionEnable)
+		{
+			road.GenerateTrain(patternManager.GetCurrentRoadSegement());
+		}
 	}
+	
+	public void SpawnCoinsSegement(Road road)
+	{
+		if (SpawnCoinEnable)
+		{
+			road.GenerateCoins(patternManager.GetCurrentRoadSegement());
+		}
+	}
+	public void SpawnBonusSegement(Road road)
+	{
+		if (SpawnBonusEnable)
+		{
+			road.GenerateBonus(patternManager.GetCurrentRoadSegement());
+		}
+	}
+	public void SpawnPattern(Road road)
+	{
 		
+		SpawnTrainSegement(road);
+		SpawnCoinsSegement(road);
+		SpawnBonusSegement(road);
+		patternManager.GetNextSegement();
+	}
 
 	public void Update()
 	{
 		for (int  i = 0;i < Roads.Count;i++)
 		{
-			if(Roads[i].transform.position.z < -RoadSpeed)
+			if(Roads[i].transform.position.z < -DistanceMaxFromStart)
 			{
 				Road road = Roads[i];
+				road.ClearPattern();
+				road.ClearBuilding();
 				ResetRoadSegementPosition(i);
 				road.GenerateBuilding();
 				if (!GameManager.instance.OnPause)
 				{
-					SpawnTrainSegement(road);
+					SpawnPattern(road);
 				}
 			}
 		}
