@@ -19,15 +19,19 @@ public class PatternConstructor : EditorWindow
 
 	static int RoadLenght = 5;
 
+
 	public bool[] TrainSelected = new bool[RoadLenght];
 	public TrainType[] trainType = new TrainType[RoadLenght];
 	public bool[] coinsSelected = new bool[RoadLenght];
+	public int[] BonusSpawned = new int[RoadLenght];
 
-	
+	int ToogleOffset = 40;
 
 	SegementDifficulty difficulty;
 
 	List<bool[]> TrainConfirmed = new List<bool[]>();
+	List<bool[]> CoinsConfirmed = new List<bool[]>();
+	List<int[]> BonusConfirmed = new List<int[]>();
 	List<TrainType[]> trainTypes = new List<TrainType[]>();
 
 	string[] DifficultyName = new string[3] {"Easy","Normal","Hard"};
@@ -48,52 +52,63 @@ public class PatternConstructor : EditorWindow
 
 
 		FileName = GUI.TextArea(new Rect(120, 40, 300, 15),FileName); 
-		GUI.Label(new Rect(10, 120, 100, 15), "Train", EditorStyles.boldLabel);
-		GUI.Label(new Rect(10, 150, 110, 15), "Coin", EditorStyles.boldLabel);
+		GUI.Label(new Rect(10, 140, 100, 15), "Train", EditorStyles.boldLabel);
+		GUI.Label(new Rect(10, 190, 110, 15), "Coin", EditorStyles.boldLabel);
+		GUI.Label(new Rect(10, 210, 110, 15), "Bonus", EditorStyles.boldLabel);
+
 
 	
-
-		for(int i = 0; i < RoadLenght; i++)
+		for (int i = 0; i < RoadLenght; i++)
 		{
-			GUI.Label(new Rect(45 + (20 * i),100,100, 10), (i+1).ToString(), EditorStyles.boldLabel);
-			TrainSelected[i] = EditorGUI.Toggle(new Rect(45 + (20 * i) , 120, 10, 10), TrainSelected[i]);
-			coinsSelected[i] = EditorGUI.Toggle(new Rect(45 +(20 * i) , 150, 10, 10), coinsSelected[i]);
+			GUI.Label(new Rect(45 + (ToogleOffset * i),120,100, 10), (i+1).ToString(), EditorStyles.boldLabel);
+			trainType[i] = (TrainType)EditorGUI.EnumPopup(new Rect(45 + ((ToogleOffset + 60) * i), 160, 60, 10), trainType[i]);
+			TrainSelected[i] = EditorGUI.Toggle(new Rect(50 + (ToogleOffset * i) , 140, 10, 10), TrainSelected[i]);
+			coinsSelected[i] = EditorGUI.Toggle(new Rect(50 +(ToogleOffset * i) , 190, 10, 10), coinsSelected[i]);
+			BonusSpawned[i] = EditorGUI.IntField(new Rect(50 +(ToogleOffset * i) , 210, 20, 20), BonusSpawned[i]);
 			//trainType[i] = (TrainType)EditorGUI.EnumPopup(new Rect(60, 88 + (20 * i), 100, 10),trainType[i]);
 		}
 	
-		if (GUI.Button(new Rect(10, 200, 200, 50), "Add Segement"))
-			AddSegement(TrainSelected,trainType);
+		if (GUI.Button(new Rect(10, 240, 200, 50), "Add Segement"))
+			AddSegement(TrainSelected,trainType,coinsSelected,BonusSpawned);
 
 
-		if (GUI.Button(new Rect(10, 275, 200, 50), "Clear pattern"))
+		if (GUI.Button(new Rect(10, 315, 200, 50), "Clear pattern"))
 			ClearPattern();
 
-		if (GUI.Button(new Rect(10, 350, 200, 50), "Creat build file"))
+		if (GUI.Button(new Rect(10, 375, 200, 50), "Creat build file"))
 			CreatAssets();
 
 		for (int i = 0; i < TrainConfirmed.Count; i++)
 		{
 			for (int j = 0; j < RoadLenght; j++)
 			{
-				GUI.Label(new Rect(220 + (20 * j), 100, 100, 10), (j + 1).ToString(), EditorStyles.boldLabel);
-				EditorGUI.Toggle(new Rect(220 + (20 * j), 120 + (20 * i), 50, 10), TrainConfirmed[i][j]);
+				GUI.Label(new Rect(620 + (20 * j), 100, 100, 10), (j + 1).ToString(), EditorStyles.boldLabel);
+				EditorGUI.Toggle(new Rect(620 + (20 * j), 120 + (20 * i), 50, 10), TrainConfirmed[i][j]);
 			}
 		}
 
 
 	}
 
-	public void AddSegement(bool[] trains, TrainType[] Types)
+	public void AddSegement(bool[] trains, TrainType[] Types,bool[] CoinsValues,int [] bonus)
 	{
-		bool[] values = new bool[RoadLenght];
-		TrainType[] Type = new TrainType[RoadLenght];
+		bool[] TrainsConfirmed = new bool[RoadLenght];
+		TrainType[] TypeConfirmed = new TrainType[RoadLenght];
+		bool[] CoinValueConfirmed = new bool[RoadLenght];
+		int[] BonusConfirmed = new int[RoadLenght];
+
 		for(int i = 0; i <RoadLenght;i++)
 		{
-			values[i] = trains[i];
-			Type[i] = Types[i];
+			TrainsConfirmed[i] = trains[i];
+			TypeConfirmed[i] = Types[i];
+			CoinValueConfirmed[i] = CoinsValues[i];
+			BonusConfirmed[i] = bonus[i];
 		}
-		TrainConfirmed.Add(values);
-		trainTypes.Add(Type);
+
+		TrainConfirmed.Add(TrainsConfirmed);
+		trainTypes.Add(TypeConfirmed);
+		CoinsConfirmed.Add(CoinValueConfirmed);
+		this.BonusConfirmed.Add(BonusConfirmed);
  	}
 
 	public void ClearCurrentSegement()
@@ -114,7 +129,7 @@ public class PatternConstructor : EditorWindow
 		RoadPattern pattern = CreateInstance<RoadPattern>();
 		for (int i = 0; i < TrainConfirmed.Count; i++)
 		{
-			pattern.MakeSegment(difficulty,trainTypes[i],TrainConfirmed[i], new bool[0]);
+			pattern.MakeSegment(difficulty,trainTypes[i],TrainConfirmed[i], CoinsConfirmed[i], BonusConfirmed[i]);
 		}
 		AssetDatabase.CreateAsset(pattern, "Assets/ScriptableObject/Road/Pattern/"+DifficultyName[(int)difficulty] +"/"+ FileName +".asset");
 		AssetDatabase.SaveAssets();
