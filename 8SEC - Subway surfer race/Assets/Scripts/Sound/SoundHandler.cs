@@ -9,6 +9,11 @@ public class SoundHandler : MonoBehaviour
 	public string MusicSaveID;
 	public string SFXSaveID;
 
+	public void Awake()
+	{
+		SetMusicVolume();
+		SetSFXVolume();
+	}
 
 	public void SaveSFXVolume(float volume)
 	{

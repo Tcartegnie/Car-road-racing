@@ -10,12 +10,12 @@ public class OptionSaveSFX : MonoBehaviour, ISaveComponent
 	public void OnSliderReleasde(float value)
 	{
 		SoundTest.Play();
+		SaveVolume(value);
 	}
 
 	public void OnValuechanged(float value)
 	{
-		SaveSFXVolume(value);
-		SetSFXVolume();
+		//SaveVolume(value);
 	}
 
 	// Start is called before the first frame update
@@ -24,6 +24,11 @@ public class OptionSaveSFX : MonoBehaviour, ISaveComponent
 		SetSFXVolume();
 	}
 
+	void SaveVolume(float value)
+	{
+		SetSFXVolume();
+		SaveSFXVolume(value);
+	}
 
 	public void SetSFXVolume()
 	{
