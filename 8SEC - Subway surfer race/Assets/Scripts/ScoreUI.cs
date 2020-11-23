@@ -4,10 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ScoreUI : MonoBehaviour
 {
-	public Text ScoreValue;
-   
+	public Text ScoreDisplay;
+	public Text MultiplicatorDisplay;
+	public Text CoinCountDisplay;
+	public void SetMultiplicator(int value)
+	{
+		MultiplicatorDisplay.text = "x"+value.ToString();
+	}
 	public void SetScore(int value)
 	{
-		ScoreValue.text = value.ToString();
+		ScoreDisplay.text = value.ToString();
+	}
+	public void SetCoinCount(int value)
+	{
+		CoinCountDisplay.text = value.ToString();
 	}
 }
