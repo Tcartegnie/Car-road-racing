@@ -7,7 +7,7 @@ public class CarParticleEmmiter : MonoBehaviour
 	public Transform carTransform;
     public List<ParticlePlayer> SmokeParticle = new List<ParticlePlayer>();
     public ParticlePlayer ExplosionFX;
-	ParticlePlayer CurrentparticlePlayer;
+	public GameObject Car;
      // Start is called before the first frame update
     
     public void PlaySmokeParticle()
@@ -18,14 +18,8 @@ public class CarParticleEmmiter : MonoBehaviour
         }
 	}
 
-    public void PlayExplostion()
+	public ParticlePlayer InstantiateExplosionFX()
 	{
-		StartCoroutine(PlayerGameOver());
-	}
-
-	public IEnumerator PlayerGameOver()
-	{
-		CurrentparticlePlayer = Instantiate(ExplosionFX, carTransform.position, new Quaternion());
-		yield return StartCoroutine(CurrentparticlePlayer.PlayOneShoot());
+		return Instantiate(ExplosionFX, carTransform.position, new Quaternion());
 	}
 }
