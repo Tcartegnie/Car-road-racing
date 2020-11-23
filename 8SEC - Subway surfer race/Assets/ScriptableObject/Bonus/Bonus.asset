@@ -14,4 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bonus:
   - Name: Heart
-    RandomRate: 20
+    RandomRate: 3
+    ID: 1
+  - Name: Multiplicator
+    RandomRate: 1
+    ID: 2
+  - Name: Invulnerability
+    RandomRate: 1
+    ID: 3
