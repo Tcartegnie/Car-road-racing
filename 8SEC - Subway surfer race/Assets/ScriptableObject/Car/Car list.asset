@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d97476d65091de40a77a03e4b5b018f, type: 3}
+  m_Name: Car list
+  m_EditorClassIdentifier: 
+  datas:
+  - CarPicture: {fileID: 21300000, guid: 539aeef67da425246a43f0f3daa0c9af, type: 3}
+    GameObject: {fileID: 5393371170306258893, guid: 1e04b71eecd3eb1458a7adc8fa92f100,
+      type: 3}
+    Cost: 100
+    name: Voiture 1
+  - CarPicture: {fileID: 21300000, guid: ddaae024264bc3b4fade62d257171d68, type: 3}
+    GameObject: {fileID: 4892749213661557826, guid: 10739201dc992cb4c9c4889bfe922390,
+      type: 3}
+    Cost: 100
+    name: Voiture 2
+  - CarPicture: {fileID: 21300000, guid: eb46c524469709f4da9ebbe5682a98fb, type: 3}
+    GameObject: {fileID: 1813859569895015890, guid: 65f9e1567bfc4d047a91fc5cf453e5e2,
+      type: 3}
+    Cost: 100
+    name: Voiture 3
