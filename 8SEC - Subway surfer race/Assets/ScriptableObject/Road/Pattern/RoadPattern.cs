@@ -8,10 +8,10 @@ public class RoadPattern : ScriptableObject
 	public List<RoadSegements> segments = new List<RoadSegements>();
 	public SegementDifficulty difficulty;
 
-	public void MakeSegment(SegementDifficulty difficulty,TrainType [] names,bool[] trains, bool[] coins)
+	public void MakeSegment(SegementDifficulty difficulty,TrainType [] names,bool[] trains, bool[] coins,int[]Bonus)
 	{
 		this.difficulty = difficulty;
-		RoadSegements segement = new RoadSegements(names, trains,coins);
+		RoadSegements segement = new RoadSegements(names, trains,coins, Bonus);
 		AddSegements(segement);
 	}
 
