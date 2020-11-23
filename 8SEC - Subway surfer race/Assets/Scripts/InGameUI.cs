@@ -11,7 +11,8 @@ public class InGameUI : MonoBehaviour
 	public FloorSpawner floorSpawner;
 	public CarStat CarStat;
 	public PlayableDirector PlayReturnToMenu;
-	public AudioSource InGameMusic; 
+	public AudioSource InGameMusic;
+	public Score score;
 	public void TurnOnUI()
 	{
 		ScoreRect.gameObject.SetActive(true);
