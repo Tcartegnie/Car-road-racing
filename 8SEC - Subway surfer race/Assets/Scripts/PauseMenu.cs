@@ -53,7 +53,7 @@ public class PauseMenu : MonoBehaviour
 	public void Pause()
 	{
 		GameManager GM = GameManager.instance;
-		GM.OnPause = true;
+		GM.SetPause(true);
 		PauseUI.gameObject.SetActive(true);
 		TextPause.text = "Game on pause, touch the screen to resume.";
 	
@@ -63,7 +63,7 @@ public class PauseMenu : MonoBehaviour
 	{
 		GameManager GM = GameManager.instance;
 		PauseUI.gameObject.SetActive(false);
-		GM.OnPause = false;
+		GM.SetPause(false);
 	}
 
 }
