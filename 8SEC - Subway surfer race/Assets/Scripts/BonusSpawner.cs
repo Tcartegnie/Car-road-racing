@@ -18,7 +18,7 @@ public class BonusSpawner : ObjectGenerator
 			BonusData data = bonusList.GetRandomBonus();
 			if (Random.Range(0, data.RandomRate) == 1)
 			{
-				GenerateObject("Bonus" + data.Name,i, Spawns[i].position);
+				GenerateObject(data.Name,i, Spawns[i].position);
 			}
 		}
 	}
