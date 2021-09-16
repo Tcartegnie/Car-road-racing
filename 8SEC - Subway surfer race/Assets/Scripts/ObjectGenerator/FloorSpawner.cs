@@ -16,9 +16,10 @@ public class FloorSpawner : MonoBehaviour
 
 	[Space]
 	public int SpawnRoadNumber;
-	bool SpawnCamionEnable;
-	bool SpawnCoinEnable;
-	bool SpawnBonusEnable;
+	public bool SpawnCamionEnable;
+	public bool SpawnCoinEnable;
+	public bool SpawnBonusEnable;
+	public bool GenerateBuild;
 
 	[Space]
 	public float RoadSpeed;
@@ -30,12 +31,32 @@ public class FloorSpawner : MonoBehaviour
 	Transform LastRoad;
 
 
-	PatternManager patternManager = new PatternManager();
+	PatternManager patternManager;
+
 	
 	public void Start()
 	{
+		patternManager = new PatternManager(Roadlist, EmptyPattern);
 		patternManager.SetTrainList(Roadlist);
 		InitSpawn();
+	}
+
+	public void Update()
+	{
+		for (int i = 0; i < Roads.Count; i++)
+		{
+			if (Roads[i].transform.position.z < -DistanceMaxFromStart)
+			{
+				Road road = Roads[i];
+				road.ClearAll();
+				ResetRoadSegementPosition(i);
+				road.GenerateBuilding();
+				if (!GameManager.instance.OnPause)
+				{
+					SpawnPattern(road);
+				}
+			}
+		}
 	}
 
 	public void InitSpawn()
@@ -49,6 +70,8 @@ public class FloorSpawner : MonoBehaviour
 		}
 	}
 
+	
+
 	public void SpawnNewSegement()
 	{
 		GameObject GO; 
@@ -56,7 +79,7 @@ public class FloorSpawner : MonoBehaviour
 		GO.transform.position = LastRoad.transform.position + ((transform.forward * RoadDistance));
 		GO.transform.rotation = new Quaternion();
 		GO.GetComponent<Road>().SetBonusList(bonusList);
-		GO.GetComponent<Road>().InitRaod(score);
+		//GO.GetComponent<Road>().InitRaod(score);
 		GO.GetComponent<MovingObject>().speed = RoadSpeed;
 		Roads.Add(GO.GetComponent<Road>());
 		LastRoad = GO.transform;
@@ -64,7 +87,7 @@ public class FloorSpawner : MonoBehaviour
 
 	public void GetNewRandomPattern()
 	{
-		patternManager.GetNewList();
+		patternManager.GetNewPattern();
 	}
 
 	public void SetDifficulty(SegementDifficulty NewDifficulty)
@@ -83,7 +106,7 @@ public class FloorSpawner : MonoBehaviour
 
 	public void EnableRoadPattern()
 	{
-		patternManager.GetNewList();
+		patternManager.GetNewPattern();
 		SpawnCamionEnable = true;
 		SpawnBonusEnable = true;
 		SpawnCoinEnable = true;
@@ -96,8 +119,11 @@ public class FloorSpawner : MonoBehaviour
 	}
 	public void ResetRoadPattern(int segementID)
 	{
-		Road CurrentRoad = Roads[segementID];
-		CurrentRoad.ChangeRoadPattern();
+		if (GenerateBuild)
+		{
+			Road CurrentRoad = Roads[segementID];
+			CurrentRoad.ChangeRoadPattern();
+		}
 	}
 
 	public void ResetRoadSegementPosition(int segementID)
@@ -108,7 +134,6 @@ public class FloorSpawner : MonoBehaviour
 
 	public void ClearRoad()
 	{
-		
 		for (int i = 0; i < Roads.Count; i++)
 		{
 			Roads[i].ClearPattern();
@@ -121,55 +146,37 @@ public class FloorSpawner : MonoBehaviour
 		patternManager.ResetPattern();
 	}
 
-	public void SpawnTrainSegement(Road road)
+	public void SpawnTrainSegement(Road road, RoadSegements segement)
 	{
 		if (SpawnCamionEnable)
 		{
-			road.GenerateTrain(patternManager.GetCurrentRoadSegement());
+			road.GenerateTrain(segement);
 		}
 	}
 	
-	public void SpawnCoinsSegement(Road road)
+	public void SpawnCoinsSegement(Road road, RoadSegements segement)
 	{
 		if (SpawnCoinEnable)
 		{
-			road.GenerateCoins(patternManager.GetCurrentRoadSegement());
+			road.GenerateCoins(segement);
 		}
 	}
-	public void SpawnBonusSegement(Road road)
+	public void SpawnBonusSegement(Road road, RoadSegements segement)
 	{
 		if (SpawnBonusEnable)
 		{
-			road.GenerateBonus(patternManager.GetCurrentRoadSegement());
+			road.GenerateBonus(segement);
 		}
 	}
 	public void SpawnPattern(Road road)
 	{
-		
-		SpawnTrainSegement(road);
-		SpawnCoinsSegement(road);
-		SpawnBonusSegement(road);
-		patternManager.GetNextSegement();
+		RoadSegements segement = patternManager.GetNextSegement();
+		SpawnTrainSegement(road,segement);
+		SpawnCoinsSegement(road, segement);
+		SpawnBonusSegement(road, segement);
 	}
 
-	public void Update()
-	{
-		for (int  i = 0;i < Roads.Count;i++)
-		{
-			if(Roads[i].transform.position.z < -DistanceMaxFromStart)
-			{
-				Road road = Roads[i];
-				road.ClearPattern();
-				road.ClearBuilding();
-				ResetRoadSegementPosition(i);
-				road.GenerateBuilding();
-				if (!GameManager.instance.OnPause)
-				{
-					SpawnPattern(road);
-				}
-			}
-		}
-	}
+
 
 
 }

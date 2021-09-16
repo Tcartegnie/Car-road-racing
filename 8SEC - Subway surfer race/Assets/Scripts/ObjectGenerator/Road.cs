@@ -24,10 +24,16 @@ public class Road : MonoBehaviour
 		bonusgGenerator.SetBonusList(list);
 	}
 	public void ChangeRoadPattern()
-	{
+	{	
 		
+			ConstructRoad();
+
+	}
+
+	public void ClearAll()
+	{
 		ClearPattern();
-		ConstructRoad();
+		ClearBuilding();
 	}
 
 	public void ClearPattern()

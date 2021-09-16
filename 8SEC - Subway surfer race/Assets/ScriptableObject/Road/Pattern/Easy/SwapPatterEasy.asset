@@ -23,7 +23,7 @@ MonoBehaviour:
     IsCoinSpawner: 0000000000
     Bonus: 0000000000000000000000000000000000000000
   - name:
-    - Ramp
+    - Train
     - Train
     - Train
     - Train
@@ -32,8 +32,8 @@ MonoBehaviour:
     IsCoinSpawner: 0000000000
     Bonus: 0000000000000000000000000000000000000000
   - name:
-    - Ramp
-    - Ramp
+    - Train
+    - Train
     - Train
     - Train
     - Train
@@ -124,7 +124,7 @@ MonoBehaviour:
   - name:
     - Train
     - Train
-    - Ramp
+    - Train
     - Train
     - Train
     Train: 0101000001

@@ -8,26 +8,39 @@ public class PatternManager
     int CurrentSegementCount = 0;
     SegementDifficulty currentDifficulty = SegementDifficulty.Easy;
     RoadPattern CurrentPatterns;
+    RoadSegements EmptyPattern;
+
+	public PatternManager(RoadList trainList, RoadSegements emptyPattern)
+	{
+		TrainList = trainList;
+		EmptyPattern = emptyPattern;
+	}
 
 	public SegementDifficulty CurrentDifficulty { get => currentDifficulty; set => currentDifficulty = value; }
 
 	public void SetTrainList(RoadList List)
 	{
         TrainList = List;
-        GetNewList();
+        GetNewPattern();
     }
 
-    public void GetNewList()
+    public void GetNewPattern()
 	{
         CurrentSegementCount = 0;
         CurrentPatterns = TrainList.GetRandomList(CurrentDifficulty);
     }
 
-    public void GetNextSegement()
+    public RoadSegements GetNextSegement()
     {
         if (!IsPatternOver())
         {
             CurrentSegementCount++;
+            return GetCurrentRoadSegement();
+        }
+        else
+		{
+            GetNewPattern();
+            return EmptyPattern;
         }
     }
 
@@ -48,11 +61,6 @@ public class PatternManager
 
     public bool IsPatternOver()
 	{
-        if(CurrentSegementCount >= CurrentPatterns.segments.Count-1)
-		{
-            GetNewList();
-            return true;
-		}
-        return false;
+        return CurrentSegementCount >= CurrentPatterns.segments.Count-1;
 	}
 }
