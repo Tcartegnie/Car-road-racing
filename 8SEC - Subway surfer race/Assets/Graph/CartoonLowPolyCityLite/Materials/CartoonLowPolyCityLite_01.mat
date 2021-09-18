@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: CartoonLowPolyCityLite_01
-  m_Shader: {fileID: -6465566751694194690, guid: 5eec962af9724de4e8ae0279f3e2afb1,
+  m_Shader: {fileID: -6465566751694194690, guid: ce1a6621ececa874db7715694f4bc2af,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -243,9 +243,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_3181b9e31e49437b9cb44ba4642071df: -0.0008
     - Vector1_93bcaea8eee142b6b74f0e3b76b6dcff: 1
     - Vector1_EDA4A014: 0.015
     - Vector1_a3ea7e6d0b5049de957b6807795c2dcc: -0.0008
+    - Vector1_ed66a36892c04b70b4ec05287a68cf5e: 1
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1

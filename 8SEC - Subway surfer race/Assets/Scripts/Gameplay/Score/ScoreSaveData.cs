@@ -68,7 +68,7 @@ public class ScoreSaveData : MonoBehaviour
 	public void Awake()
 	{
         
-        DataPath = Application.dataPath;
+        DataPath = Application.persistentDataPath;
        
         LoadPlayerScoreData();
         LoadCoinData();

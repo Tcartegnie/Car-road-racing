@@ -50,6 +50,7 @@ public class FloorSpawner : MonoBehaviour
 				Road road = Roads[i];
 				road.ClearAll();
 				ResetRoadSegementPosition(i);
+				road.InitRaod(score);
 				road.GenerateBuilding();
 				if (!GameManager.instance.OnPause)
 				{

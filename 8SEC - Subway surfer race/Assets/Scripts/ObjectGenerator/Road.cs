@@ -13,10 +13,14 @@ public class Road : MonoBehaviour
 	[SerializeField]
 	TrainGenerator trainGenerator;
 
+	public void Start()
+	{
+		
+	}
+
 	public void InitRaod(Score score)
 	{
 		coinGenerator.Score = score;
-		GenerateBuilding();
 	}
 
 	public void SetBonusList(BonusList list)
