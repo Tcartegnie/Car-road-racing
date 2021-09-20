@@ -17,6 +17,7 @@ public class CarStat : MonoBehaviour
 	public ParticlePlayer Explosion;
 	public AudioSource EngineSource;
 	public CarCinematiqueMovement carCinematiqueMovement;
+	public FloorSpawner spawner;
 	GameManager GM;
 	public void Start()
 	{
@@ -65,6 +66,7 @@ public class CarStat : MonoBehaviour
 
 	public IEnumerator PlayerGameOver()
 	{
+		spawner.DisableMoveRoad();
 		GM.SetPause(true);
 		KillCar();
 		yield return StartCoroutine(PlayExplosion());
