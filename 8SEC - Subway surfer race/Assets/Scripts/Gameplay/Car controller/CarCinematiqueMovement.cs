@@ -43,7 +43,7 @@ public class CarCinematiqueMovement : MonoBehaviour
 			Car.position = Vector3.Lerp(start, destination, i);
 			yield return null;
 		}
-		Car.position = Vector3.Lerp(start, destination, 1);
+		Car.position = Vector3.Lerp(start, destination, 1.0f);
 	}
 
 	public IEnumerator CarTransitionIn()
