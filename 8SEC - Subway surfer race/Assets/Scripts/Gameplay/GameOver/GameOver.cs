@@ -36,13 +36,19 @@ public class GameOver : MonoBehaviour
 		GameOverUI.DiseableGameOverUI();
 	}
 
+	public void RestartRoad()
+	{
+		floorSpawner.ResetPattern();
+		floorSpawner.EnableMoveRoad();
+	}
+
 	public void Resume()
 	{
 		RessurectPlayer();
 		GameManager.instance.life -= ResCost;
 		ResCost += 1;
 		chrono.StartChrono();
-		floorSpawner.ResetPattern();
+		RestartRoad();
 	}
 
 	public void ResetGame()
@@ -50,7 +56,7 @@ public class GameOver : MonoBehaviour
 		RessurectPlayer();
 		score.ResetScore();
 		chrono.StartChrono();
-		floorSpawner.ResetPattern();
+		RestartRoad();
 	}
 
 	public void ReturnToMainMenu()
@@ -65,6 +71,7 @@ public class GameOver : MonoBehaviour
 	{
 		GameMusic.Stop();
 		GameOverUI.EnableUIGameOver();
+		//floorSpawner.DisableMoveRoad();
 	}
 
 	public void OnContinueButtonPressed()
