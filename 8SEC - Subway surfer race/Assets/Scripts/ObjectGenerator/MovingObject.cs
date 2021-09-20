@@ -6,6 +6,7 @@ public class MovingObject : MonoBehaviour
 {
 	public float speed;
 	public GameManager GM;
+	public bool CanMove = true;
 	// Update is called once per frame
 	private void Start()
 	{
@@ -15,7 +16,7 @@ public class MovingObject : MonoBehaviour
 
 	void Update()
     {
-		if (!GM.OnPause)
+		if (CanMove)
 		{
 			MoveForward();
 		}

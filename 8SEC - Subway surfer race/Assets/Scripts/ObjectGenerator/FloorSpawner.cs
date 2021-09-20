@@ -82,8 +82,25 @@ public class FloorSpawner : MonoBehaviour
 		GO.GetComponent<Road>().SetBonusList(bonusList);
 		//GO.GetComponent<Road>().InitRaod(score);
 		GO.GetComponent<MovingObject>().speed = RoadSpeed;
+		GO.GetComponent<MovingObject>().CanMove = true;
 		Roads.Add(GO.GetComponent<Road>());
 		LastRoad = GO.transform;
+	}
+
+	public void EnableMoveRoad()
+	{
+		for (int i = 0; i < Roads.Count; i++)
+		{
+			Roads[i].GetComponent<MovingObject>().CanMove = true;
+		}
+	}
+
+	public void DisableMoveRoad()
+	{
+		for (int i = 0; i < Roads.Count; i++)
+		{
+			Roads[i].GetComponent<MovingObject>().CanMove = false;
+		}
 	}
 
 	public void GetNewRandomPattern()
