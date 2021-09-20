@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EndGame : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class EndGame : MonoBehaviour
 	public InGameUI IGUI;
 
 	public float CoolDownAfterCount;
+
 
 	public void PlayDisplayScore()
 	{
