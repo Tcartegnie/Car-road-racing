@@ -21,14 +21,10 @@ public class ObjectPooler : MonoBehaviour
 
 
 
-
-//	public List<pool> PoolList;
 	public List<poolObject> PoolObject = new List<poolObject>();
 	Dictionary<string, Queue<GameObject>> poolDictionnary;
 
 
-
-	// Start is called before the first frame update
 
 	#region Singelton
 	public	static ObjectPooler instance;
