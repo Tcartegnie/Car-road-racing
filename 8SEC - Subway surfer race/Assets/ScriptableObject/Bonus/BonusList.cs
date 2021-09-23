@@ -5,7 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public struct BonusData
 {
+	public Sprite ObjectPicture;
 	public string Name;
+	public float Duration;
 	public int RandomRate;
 	public int ID;
 }
