@@ -9,7 +9,7 @@ public class ScoreMultiplier : CollectibleObject
 	public override void UseBonus(GameObject other)
 	{
 		base.UseBonus(other);
-		other.GetComponentInChildren<BonusCaller>().CallMultiplicator(MultiplicatorValue, Duration);
+		other.GetComponentInChildren<BonusCaller>().CallMultiplicator(MultiplicatorValue, ObjectName);
 		//	other.GetComponentInParent<Score>().AddMultiplicatorValue(MultiplicatorValue);
 		other.GetComponentInParent<CarStat>().EnableBonusBar(ObjectName);
 	}

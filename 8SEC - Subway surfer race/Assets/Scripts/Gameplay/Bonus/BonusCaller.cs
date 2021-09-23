@@ -12,17 +12,24 @@ public class BonusCaller : MonoBehaviour
 {
     public Invulnerability invulnerabilty;
     public BonusMultiplicator bonusmultiplicator;
-
-    //public BonusCalle invulnerabilty;
-
-    public void CallMultiplicator(int multiplicator,float duration)
+	public BonusList list;
+	//public BonusCalle invulnerabilty;
+	BonusData GetBonusByName(string BonusName)
 	{
-        bonusmultiplicator.CallBonus(multiplicator,duration);
+		return list.GetBonusByName(BonusName);
+	}
+
+
+    public void CallMultiplicator(int multiplicator,string BonusName)
+	{
+		BonusData data = GetBonusByName(BonusName);
+		bonusmultiplicator.CallBonus(multiplicator, data.Duration);
     }
 
-    public void CallInvulnerability(float duration)
+    public void CallInvulnerability(string BonusName)
 	{
-        invulnerabilty.CallBonus(duration);
+		BonusData data = GetBonusByName(BonusName);
+        invulnerabilty.CallBonus(data.Duration);
     }
     
 
