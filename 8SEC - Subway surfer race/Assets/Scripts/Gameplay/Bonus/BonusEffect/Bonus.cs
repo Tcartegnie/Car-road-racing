@@ -35,6 +35,8 @@ public class Bonus : MonoBehaviour
 	}
 
 	public virtual void OnTimerNull(){}
-	
+
+
+
 
 }

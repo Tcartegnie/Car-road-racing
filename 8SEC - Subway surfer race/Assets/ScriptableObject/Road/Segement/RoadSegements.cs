@@ -13,17 +13,17 @@ public class RoadSegements
    public string[] name = new string[5];
    public bool[] Train = new bool[5];
    public bool[] IsCoinSpawner = new bool[5];
-   public int[] Bonus = new int[5];
+   public bool[] Bonus = new bool[5];
 
 	public RoadSegements()
 	{
 		Train = new bool[0];
 		IsCoinSpawner = new bool[0];
-		Bonus = new int[0];
+		Bonus = new bool[0];
 		name = new string[0];
 	}
 
-	public RoadSegements(TrainType [] name,bool[] spawns, bool[] isCoinSpawner,int[]bonus)
+	public RoadSegements(TrainType [] name,bool[] spawns, bool[] isCoinSpawner, bool[]bonus)
 	{
 		SetTrainName(name);
 		Train = spawns;
