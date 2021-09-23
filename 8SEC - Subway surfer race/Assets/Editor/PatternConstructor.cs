@@ -23,7 +23,7 @@ public class PatternConstructor : EditorWindow
 	public bool[] TrainSelected = new bool[RoadLenght];
 	public TrainType[] trainType = new TrainType[RoadLenght];
 	public bool[] coinsSelected = new bool[RoadLenght];
-	public int[] BonusSpawned = new int[RoadLenght];
+	public bool[] BonusSpawned = new bool[RoadLenght];
 
 	int ToogleOffset = 40;
 
@@ -31,7 +31,7 @@ public class PatternConstructor : EditorWindow
 
 	List<bool[]> TrainConfirmed = new List<bool[]>();
 	List<bool[]> CoinsConfirmed = new List<bool[]>();
-	List<int[]> BonusConfirmed = new List<int[]>();
+	List<bool[]> BonusConfirmed = new List<bool[]>();
 	List<TrainType[]> trainTypes = new List<TrainType[]>();
 
 	string[] DifficultyName = new string[3] {"Easy","Normal","Hard"};
@@ -64,7 +64,7 @@ public class PatternConstructor : EditorWindow
 			trainType[i] = (TrainType)EditorGUI.EnumPopup(new Rect(45 + ((ToogleOffset + 60) * i), 160, 60, 10), trainType[i]);
 			TrainSelected[i] = EditorGUI.Toggle(new Rect(50 + (ToogleOffset * i) , 140, 10, 10), TrainSelected[i]);
 			coinsSelected[i] = EditorGUI.Toggle(new Rect(50 +(ToogleOffset * i) , 190, 10, 10), coinsSelected[i]);
-			BonusSpawned[i] = EditorGUI.IntField(new Rect(50 +(ToogleOffset * i) , 210, 20, 20), BonusSpawned[i]);
+			BonusSpawned[i] = EditorGUI.Toggle(new Rect(50 +(ToogleOffset * i) , 210, 20, 20), BonusSpawned[i]);
 			//trainType[i] = (TrainType)EditorGUI.EnumPopup(new Rect(60, 88 + (20 * i), 100, 10),trainType[i]);
 		}
 	
@@ -90,12 +90,12 @@ public class PatternConstructor : EditorWindow
 
 	}
 
-	public void AddSegement(bool[] trains, TrainType[] Types,bool[] CoinsValues,int [] bonus)
+	public void AddSegement(bool[] trains, TrainType[] Types,bool[] CoinsValues,bool [] bonus)
 	{
 		bool[] TrainsConfirmed = new bool[RoadLenght];
 		TrainType[] TypeConfirmed = new TrainType[RoadLenght];
 		bool[] CoinValueConfirmed = new bool[RoadLenght];
-		int[] BonusConfirmed = new int[RoadLenght];
+		bool[] BonusConfirmed = new bool[RoadLenght];
 
 		for(int i = 0; i <RoadLenght;i++)
 		{
