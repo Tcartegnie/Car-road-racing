@@ -13,6 +13,12 @@ public class InGameUI : MonoBehaviour
 	public PlayableDirector PlayReturnToMenu;
 	public AudioSource InGameMusic;
 	public Score score;
+	GameManager GM;
+	private void Start()
+	{
+		GM = GameManager.instance;
+	}
+
 	public void TurnOnUI()
 	{
 		ScoreRect.gameObject.SetActive(true);
@@ -29,6 +35,7 @@ public class InGameUI : MonoBehaviour
 
 	public void OnButtonReturnPressed()
 	{
+		GM.SetPause(true);
 		TurnOffUI();
 		floorSpawner.RestAndStopRoad();
 		CarStat.InitCar();

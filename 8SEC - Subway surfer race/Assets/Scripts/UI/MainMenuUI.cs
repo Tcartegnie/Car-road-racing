@@ -28,11 +28,14 @@ public class MainMenuUI : MonoBehaviour
     public Score scoreMenu;
     public ShopMenu shopmenu;
 
+    public bool IsInMainMenu;
+
 	public void Start()
 	{
         GM = GameManager.Instance();
         SetHigtScore();
-	}
+        IsInMainMenu = true;
+    }
 	public void StartGame()
     { 
         TurnToGameCamera();
@@ -41,6 +44,7 @@ public class MainMenuUI : MonoBehaviour
         scoreDisplayer.RefreshScore();
         scoreMenu.ResetScore();
         scoreMenu.ResetMultiplicator();
+        IsInMainMenu = false;
     }
 
 
@@ -120,6 +124,7 @@ public class MainMenuUI : MonoBehaviour
         TurnToMenuCamera();
         TurnOnMainMenuUI();
         scoreDisplayer.RefreshScore();
+        IsInMainMenu = true;
     }
 
     public void QuitApplication()
