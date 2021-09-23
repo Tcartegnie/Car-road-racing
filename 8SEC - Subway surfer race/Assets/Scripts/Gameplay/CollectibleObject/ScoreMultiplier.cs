@@ -11,5 +11,6 @@ public class ScoreMultiplier : CollectibleObject
 		base.UseBonus(other);
 		other.GetComponentInChildren<BonusCaller>().CallMultiplicator(MultiplicatorValue, Duration);
 		//	other.GetComponentInParent<Score>().AddMultiplicatorValue(MultiplicatorValue);
+		other.GetComponentInParent<CarStat>().EnableBonusBar(ObjectName);
 	}
 }
