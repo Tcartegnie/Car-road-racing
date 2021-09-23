@@ -17,7 +17,7 @@ public class CollectibleObject : MonoBehaviour
 	public float Duration = 0;
 	public AudioClip sound;
 	public AudioSource Audiosource;
-
+	public string ObjectName;
 
 	void Update()
 	{
@@ -39,7 +39,6 @@ public class CollectibleObject : MonoBehaviour
 		{
 			Target = other.transform;
 			StartCoroutine(TravelToTarget(Target.gameObject));
-		
 		}
 	}
 
