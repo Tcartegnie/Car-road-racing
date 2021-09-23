@@ -18,6 +18,7 @@ public class CarStat : MonoBehaviour
 	public AudioSource EngineSource;
 	public CarCinematiqueMovement carCinematiqueMovement;
 	public FloorSpawner spawner;
+	public BonusBar Bonusbar;
 	GameManager GM;
 	public void Start()
 	{
@@ -95,5 +96,11 @@ public class CarStat : MonoBehaviour
 	public void EnableEndGameScreen()
 	{
 		GameOver.EnableGameOver();
+	}
+
+	public void EnableBonusBar(string BonusName)
+	{
+		Bonusbar.Bonusbar.SetActive(true);
+		Bonusbar.InitBar(BonusName);
 	}
 }
