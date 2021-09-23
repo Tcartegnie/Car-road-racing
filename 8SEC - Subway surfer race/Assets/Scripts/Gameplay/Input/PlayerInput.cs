@@ -10,6 +10,7 @@ public class PlayerInput : MonoBehaviour
 	public CarStat PlayerStat;
 	public Vector2 SwipeSensitivity;
 	public CarCinematiqueMovement carCinematiqueMovement;
+
 	GameManager GM;
 
 	public void Start()
