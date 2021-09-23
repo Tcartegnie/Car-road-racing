@@ -4993,8 +4993,10 @@ MonoBehaviour:
   TravellingTime: 0.2
   ObjectHeight: 2
   TimeOnPlayerTop: 1
+  Duration: 0
   sound: {fileID: 8300000, guid: 7478151cf36724a7dada558f746c3633, type: 3}
   Audiosource: {fileID: 8646618907489115607}
+  ObjectName: Heart
 --- !u!135 &2248057265325022078
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5113,6 +5115,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4216859302048453862, guid: e8aa69ca92dd1ca4aac627275ab8db48,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: e8aa69ca92dd1ca4aac627275ab8db48,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -5128,6 +5135,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e8aa69ca92dd1ca4aac627275ab8db48,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: e8aa69ca92dd1ca4aac627275ab8db48,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.7071068
       objectReference: {fileID: 0}
@@ -5140,16 +5152,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: e8aa69ca92dd1ca4aac627275ab8db48,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: e8aa69ca92dd1ca4aac627275ab8db48,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e8aa69ca92dd1ca4aac627275ab8db48,
         type: 3}
