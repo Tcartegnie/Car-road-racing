@@ -16,9 +16,9 @@ public class BonusGenerator : ObjectGenerator
 	{
 		for (int i = 0; i < segement.Train.Length;i++)
 		{
-			if (segement.Bonus[i] != 0)
+			if (segement.Bonus[i])
 			{
-				BonusData data = bonus.GetBonusByID(segement.Bonus[i]); 
+				BonusData data = bonus.GetRandomBonus();
 				if (UnityEngine.Random.Range(0, data.RandomRate) == 0)
 				{
 					GenerateObject(data.Name, i, new Vector3());
