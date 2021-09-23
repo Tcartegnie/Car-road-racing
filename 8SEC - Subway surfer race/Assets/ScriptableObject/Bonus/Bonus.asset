@@ -13,12 +13,18 @@ MonoBehaviour:
   m_Name: Bonus
   m_EditorClassIdentifier: 
   Bonus:
-  - Name: Heart
+  - ObjectPicture: {fileID: 21300000, guid: 4c3df6e220778184dbb1f8da8d355da7, type: 3}
+    Name: Heart
+    Duration: 0
     RandomRate: 3
+    ID: 0
+  - ObjectPicture: {fileID: 21300000, guid: 84876f9fa7d11e74a8b58ffeeaa3beba, type: 3}
+    Name: Multiplicator
+    Duration: 2
+    RandomRate: 1
     ID: 1
-  - Name: Multiplicator
+  - ObjectPicture: {fileID: 21300000, guid: 8542284dd4b3b3d449a33ee839fb62b3, type: 3}
+    Name: Invulnerability
+    Duration: 2
     RandomRate: 1
     ID: 2
-  - Name: Invulnerability
-    RandomRate: 1
-    ID: 3
