@@ -39,6 +39,8 @@ public class CarController : MonoBehaviour
 	public AudioClip JumpSound;
 	public AudioSource SoundSource;
 
+	public MainMenuUI menu;
+
 	public void Start()
 	{
 		ResetPosition();
@@ -81,7 +83,7 @@ public class CarController : MonoBehaviour
 
 	public void Straff(int direction)
 	{
-		if (!IsStraffing)
+		if (!IsStraffing && !menu.IsInMainMenu)
 		{
 			LaneID += direction;
 
