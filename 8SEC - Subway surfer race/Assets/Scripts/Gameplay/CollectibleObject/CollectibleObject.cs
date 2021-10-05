@@ -14,7 +14,6 @@ public class CollectibleObject : MonoBehaviour
 	public float TravellingTime;
 	public float ObjectHeight;
 	public float TimeOnPlayerTop;
-	public float Duration = 0;
 	public AudioClip sound;
 	public AudioSource Audiosource;
 	public string ObjectName;
