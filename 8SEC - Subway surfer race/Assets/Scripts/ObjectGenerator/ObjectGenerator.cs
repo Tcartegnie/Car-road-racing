@@ -9,7 +9,12 @@ public class ObjectGenerator : MonoBehaviour
 	public List<Transform> Spawns = new List<Transform>();
 
 
-
+	public GameObject GenerateObject(string name, Vector3 position)
+	{
+		GameObject GO = ObjectPooler.instance.SpawnFromPool(name, position, new Quaternion());
+		CurrentObjects.Add(GO);
+		return GO;
+	}
 
 	public GameObject GenerateObject(string name, int SpawnID, Vector3 Offset)
 	{
