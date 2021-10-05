@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 8615574788346371406}
   - component: {fileID: 3998382789967798151}
   - component: {fileID: 3562078666377143973}
+  - component: {fileID: 1143117151599564034}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -243,6 +244,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
   Audiosource: {fileID: 3562078666377143973}
   ObjectName: 
+  RB: {fileID: 1143117151599564034}
   Value: 20
   CoinNumber: 1
 --- !u!135 &3998382789967798151
@@ -354,6 +356,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!54 &1143117151599564034
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8723741861506948335}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
 --- !u!1001 &2044519846815476716
 PrefabInstance:
   m_ObjectHideFlags: 0

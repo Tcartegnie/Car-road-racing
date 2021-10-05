@@ -138,6 +138,9 @@ GameObject:
   - component: {fileID: 7174821296295648206}
   - component: {fileID: 8732735850186073215}
   - component: {fileID: 5714909063516456722}
+  - component: {fileID: 2348019936510942518}
+  - component: {fileID: 6116586781010888846}
+  - component: {fileID: 2729726564670149224}
   m_Layer: 9
   m_Name: Invulnerabililty
   m_TagString: Untagged
@@ -174,14 +177,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 1
-  ObjetTR: {fileID: 7174821296295648206}
+  ObjetTR: {fileID: 4744182841465442317}
   TravellingTime: 4
   ObjectHeight: 3
   TimeOnPlayerTop: 2
-  Duration: 15
   sound: {fileID: 8300000, guid: 4e1ff8faed12a475eba9be0e46072269, type: 3}
   Audiosource: {fileID: 2942360568670306485}
   ObjectName: Invulnerability
+  RB: {fileID: 2348019936510942518}
 --- !u!65 &5714909063516456722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -195,6 +198,50 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &2348019936510942518
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924143041662977942}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
+--- !u!65 &6116586781010888846
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924143041662977942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10561833, y: 0.12587416, z: 0.88360214}
+  m_Center: {x: 0.04183598, y: -0.43706292, z: -0.014638901}
+--- !u!114 &2729726564670149224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924143041662977942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1b764baf61c184dbb5bb29326d1e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  GM: {fileID: 0}
+  CanMove: 1
 --- !u!1 &6703185035922456556
 GameObject:
   m_ObjectHideFlags: 0

@@ -231,6 +231,9 @@ GameObject:
   - component: {fileID: 2912233497231529467}
   - component: {fileID: 3484038430416528362}
   - component: {fileID: 6086251611241467724}
+  - component: {fileID: 837873325991889033}
+  - component: {fileID: 4258192482171756581}
+  - component: {fileID: 3039982169022114480}
   m_Layer: 0
   m_Name: BonusScoreMultiplicator
   m_TagString: Untagged
@@ -268,13 +271,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationSpeed: 0.5
-  ObjetTR: {fileID: 2912233497231529467}
+  ObjetTR: {fileID: 2618128004861282813}
   TravellingTime: 0.1
   ObjectHeight: 2
   TimeOnPlayerTop: 1
   sound: {fileID: 8300000, guid: a235d590ef2a04d1b85b61ef4c21337c, type: 3}
   Audiosource: {fileID: 8882971752371703154}
   ObjectName: Multiplicator
+  RB: {fileID: 837873325991889033}
   MultiplicatorValue: 2
 --- !u!65 &6086251611241467724
 BoxCollider:
@@ -289,6 +293,50 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &837873325991889033
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4879233398744250382}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0
+--- !u!65 &4258192482171756581
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4879233398744250382}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.58750343, z: 1}
+  m_Center: {x: 0, y: 0.20624828, z: 0}
+--- !u!114 &3039982169022114480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4879233398744250382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1b764baf61c184dbb5bb29326d1e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  GM: {fileID: 0}
+  CanMove: 1
 --- !u!1001 &2585010050703502870
 PrefabInstance:
   m_ObjectHideFlags: 0
