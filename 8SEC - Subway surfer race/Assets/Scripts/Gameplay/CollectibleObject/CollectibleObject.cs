@@ -17,6 +17,7 @@ public class CollectibleObject : MonoBehaviour
 	public AudioClip sound;
 	public AudioSource Audiosource;
 	public string ObjectName;
+	public Rigidbody RB;
 
 	void Update()
 	{
@@ -30,6 +31,16 @@ public class CollectibleObject : MonoBehaviour
 	public void Start()
 	{
 		GM = GameManager.instance;
+	}
+
+	public void EnableGravity()
+	{
+		RB.useGravity = true;
+	}
+
+	public void DiseableGravity()
+	{
+		RB.useGravity = true;
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -61,5 +72,9 @@ public class CollectibleObject : MonoBehaviour
 		RemoveItem();
 	}
 
+	public void OnCollisionEnter(Collision collision)
+	{
+		GetComponent<MovingObject>().speed = 60.0f;
+	}
 
 }
