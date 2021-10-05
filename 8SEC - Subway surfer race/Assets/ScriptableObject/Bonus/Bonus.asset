@@ -17,14 +17,11 @@ MonoBehaviour:
     Name: Heart
     Duration: 0
     RandomRate: 3
-    ID: 0
   - ObjectPicture: {fileID: 21300000, guid: 84876f9fa7d11e74a8b58ffeeaa3beba, type: 3}
     Name: Multiplicator
-    Duration: 2
+    Duration: 15
     RandomRate: 1
-    ID: 1
   - ObjectPicture: {fileID: 21300000, guid: 8542284dd4b3b3d449a33ee839fb62b3, type: 3}
     Name: Invulnerability
-    Duration: 2
+    Duration: 5
     RandomRate: 1
-    ID: 2
