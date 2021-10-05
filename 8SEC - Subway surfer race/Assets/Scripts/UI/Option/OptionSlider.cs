@@ -38,6 +38,9 @@ public class OptionSlider : MonoBehaviour
 	public void OnValueChanged() 
 	{
 		SaveComponent.OnValuechanged(slider.value);
+	#if UNITY_EDITOR
+		SaveComponent.OnSliderReleasde(slider.value);
+	#endif
 	}
 
 	public void OnSliderRealese()
