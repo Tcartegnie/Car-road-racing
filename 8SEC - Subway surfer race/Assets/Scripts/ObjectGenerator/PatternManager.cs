@@ -34,8 +34,9 @@ public class PatternManager
     {
         if (!IsPatternOver())
         {
+            RoadSegements segement = GetCurrentRoadSegement();
             CurrentSegementCount++;
-            return GetCurrentRoadSegement();
+            return segement;
         }
         else
 		{
