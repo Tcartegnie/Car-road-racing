@@ -7,7 +7,7 @@ public class CarController : MonoBehaviour
 	public float speed;
 	public float XOffsetIntensity;
 	public int LaneID = 2;
-	public Transform[] LanePosition;
+
 
 
 	public float ZLandmarkPosition = 0;
@@ -17,17 +17,16 @@ public class CarController : MonoBehaviour
 
 	public float YOffset;
 
-	public float SwapDuration;
+	
 	public float JumpDuration;
 	public Rigidbody RB;
 	public float jumpForce;
 	public float AirTime;
-	public AnimationCurve curve;
 
 	public LayerMask GroundLayer;
 	public Collider collider;
 
-	public Transform CarTransform;
+
 
 	bool GravityState;
 	bool IsStraffing;
@@ -41,6 +40,8 @@ public class CarController : MonoBehaviour
 
 	public MainMenuUI menu;
 
+	public SwapLine swap;
+
 	public void Start()
 	{
 		ResetPosition();
@@ -53,9 +54,8 @@ public class CarController : MonoBehaviour
 
 	public void ResetPosition()
 	{
-		transform.position = new Vector3(LanePosition[2].position.x, 1.9f,transform.position.z);
-		CarTransform.localPosition = new Vector3(LanePosition[2].position.x,CarTransform.localPosition.y,CarTransform.localPosition.z);
 		LaneID = 2;
+	 StartCoroutine(swap.SwapToLine(LaneID));
 	}
 
 	public void MoveOnForward(float direction)
@@ -86,19 +86,11 @@ public class CarController : MonoBehaviour
 		if (!IsStraffing && !menu.IsInMainMenu)
 		{
 			LaneID += direction;
-
 			LaneID = Mathf.Clamp(LaneID, 0, 4);
-
-			Vector3 FinalDestination = new Vector3(LanePosition[LaneID].position.x, CarTransform.position.y, CarTransform.position.z);
 			CarParticleEmmiter.PlaySmokeParticle();
-			StartCoroutine(SmoothSwap(FinalDestination));
+			StartCoroutine(SmoothSwap(LaneID));
 		}
 	}
-
-	//public bool IsGrounded()
-	//{
-		
-	//}
 
 	public void Jump()
 	{
@@ -134,18 +126,15 @@ public class CarController : MonoBehaviour
 		}
 	}
 
-	IEnumerator SmoothSwap(Vector3 Destination)
+	IEnumerator SmoothSwap(int LineID)
 	{
 		PlayStraffSound();
+		
 		IsStraffing = true;
 		RB.useGravity = false;
-		Vector3 OriginPos = CarTransform.position;
-		for(float  i = 0; i < 1; i += Time.deltaTime / SwapDuration)
-		{
-			CarTransform.position = Vector3.Lerp(new Vector3(OriginPos.x,CarTransform.position.y, OriginPos.z), new Vector3(Destination.x,CarTransform.position.y,Destination.z),curve.Evaluate(i));
-			yield return null;
-		}
-		CarTransform.position = Vector3.Lerp(OriginPos, new Vector3(Destination.x, CarTransform.position.y, Destination.z), 1);
+
+		yield return StartCoroutine(swap.SwapToLine(LineID));
+
 		RB.useGravity = true;
 		IsStraffing = false;
 	}
