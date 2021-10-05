@@ -12,7 +12,7 @@ public class CarStat : MonoBehaviour
 	public GameObject Car;
 	public GameOver GameOver;
 	public Score score;
-	//public Collider collider;
+	public Collider collider;
 	public CarParticleEmmiter CarParticleEmmiter;
 	public ParticlePlayer Explosion;
 	public AudioSource EngineSource;
@@ -42,9 +42,9 @@ public class CarStat : MonoBehaviour
 	public void EnableCar()
 	{
 		RB.useGravity = true;
+		RB.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
 		IsDead = false;
 		Car.SetActive(true);
-		//collider.enabled = true;
 	}
 
 	public void DiseableCar()
@@ -52,9 +52,8 @@ public class CarStat : MonoBehaviour
 		RB.useGravity = false;
 		IsDead = true;
 		Car.SetActive(false);
-	//	collider.enabled = false;
 		RB.velocity = Vector3.zero;
-
+		RB.constraints = RigidbodyConstraints.FreezeAll;
 	}
 
 	public void Respawn()
