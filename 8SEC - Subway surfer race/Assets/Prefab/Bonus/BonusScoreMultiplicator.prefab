@@ -272,8 +272,7 @@ MonoBehaviour:
   TravellingTime: 0.1
   ObjectHeight: 2
   TimeOnPlayerTop: 1
-  Duration: 10
-  sound: {fileID: 8300000, guid: 00e0562cbe513544b9254e5103bb3711, type: 3}
+  sound: {fileID: 8300000, guid: a235d590ef2a04d1b85b61ef4c21337c, type: 3}
   Audiosource: {fileID: 8882971752371703154}
   ObjectName: Multiplicator
   MultiplicatorValue: 2
