@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class FlyingGifterController : MonoBehaviour
 {
-    public Chrono chrono;
+    Chrono chrono;
 	public SwapLine swap;
 	public int RandomRate;
 	public BonusSpawner spawner;
+
 	public void Start()
 	{
+		chrono = new Chrono (10.0f);
 		chrono.OnEndChrono += OnEndChrono;
 		chrono.StartChrono();
 	}
 
+	public void Update()
+	{
+		chrono.PlayChrono();
+	}
 
 	public void SpawnRandomObject()
 	{
 		if(Random.Range(0,100) <= RandomRate)
 		{
-			spawner.SpawnBonusOnPosition();
+		GameObject GO =	spawner.SpawnBonusOnPosition();
+		GO.GetComponentInChildren<CollectibleObject>().EnableGravity();
 		}
 	}
 
