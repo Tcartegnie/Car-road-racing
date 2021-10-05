@@ -253,6 +253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1631056210273465914}
+  - component: {fileID: 1586329465890097043}
   - component: {fileID: 8100790466314365080}
   - component: {fileID: 7619413865682673576}
   - component: {fileID: 1211626993}
@@ -283,6 +284,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1586329465890097043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631056210273465915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441c7966b9bf8fc4a84d4d0f83bc2d5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8100790466314365080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,11 +354,13 @@ MonoBehaviour:
     m_Bits: 512
   collider: {fileID: 132813339}
   CarTransform: {fileID: 3631428201743794285}
+  OnGround: 0
   CarParticleEmmiter: {fileID: 0}
   SkiddingSound: {fileID: 8300000, guid: 00e0562cbe513544b9254e5103bb3711, type: 3}
   OnAirStraff: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
   JumpSound: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
   SoundSource: {fileID: 1211626993}
+  menu: {fileID: 0}
 --- !u!114 &7619413865682673576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +383,8 @@ MonoBehaviour:
     type: 3}
   EngineSource: {fileID: 1211626993}
   carCinematiqueMovement: {fileID: 1211626994}
+  spawner: {fileID: 0}
+  Bonusbar: {fileID: 0}
 --- !u!82 &1211626993
 AudioSource:
   m_ObjectHideFlags: 0
@@ -570,6 +587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invulnerabilty: {fileID: 7424612335056877649}
   bonusmultiplicator: {fileID: 6856173386306907167}
+  list: {fileID: 0}
 --- !u!1 &7746137520741878090
 GameObject:
   m_ObjectHideFlags: 0
