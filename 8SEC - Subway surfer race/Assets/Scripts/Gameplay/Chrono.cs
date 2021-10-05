@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chrono : MonoBehaviour
+public class Chrono
 {
 	public float TimerValue = 0.0f;
     bool ChronoEnable = false;
@@ -22,10 +22,6 @@ public class Chrono : MonoBehaviour
 		ChronoEnable = true;
 	}
 
-	public void Update()
-	{
-		PlayChrono();
-	}
 
 	public void PlayChrono()
 	{
