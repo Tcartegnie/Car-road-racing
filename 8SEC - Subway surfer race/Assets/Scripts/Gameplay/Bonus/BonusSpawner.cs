@@ -7,11 +7,11 @@ public class BonusSpawner : ObjectGenerator
 
 	public void Start()
 	{
-		SpawnBonusOnLine();
+		SpawnRandomBonusOnLine();
 	}
 	
 	public BonusList bonusList;
-	public void SpawnBonusOnLine()
+	public void SpawnRandomBonusOnLine()
 	{
 		for (int i = 0; i < Spawns.Count; i++)
 		{
@@ -23,16 +23,12 @@ public class BonusSpawner : ObjectGenerator
 		}
 	}
 
-	public void SpawnBonusOnPosition()
+	public GameObject SpawnBonusOnPosition()
 	{
 			BonusData data = bonusList.GetRandomBonus();
-			if (Random.Range(0, data.RandomRate) == 1)
-			{
-				GameObject GO =	GenerateObject(data.Name, 0, Vector3.zero);
-				GO.AddComponent<MovingObject>();
-			}	
+			GameObject GO = GenerateObject(data.Name, transform.position);
+			return GO;
+			
 	}
 
-
-	
 }
