@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Score : MonoBehaviour
 {
@@ -9,13 +10,15 @@ public class Score : MonoBehaviour
 	public int ScorePerSec;
 	public int Multiplicator;
 	public float ScoreIncrementalTime;
-	
+	public float ScoreBonusReach;
 	[Space]
 
 	public PauseMenu menu;
 	public ScoreUI scoreUI;
 	[SerializeField]
 	ScoreSaveData scoreData;
+
+	public UnityEvent OnCoinBonusReach;
 
 	int score;
 	int CoinCount;
@@ -63,7 +66,16 @@ public class Score : MonoBehaviour
 	public void AddCoin(int value)
 	{
 		CoinCount += (value);
+		ComputeCoinModulo();
 		UpdateCoinCount();
+	}
+
+	public void ComputeCoinModulo()
+	{
+		if (CoinCount % ScoreBonusReach == 0)
+		{
+			OnCoinBonusReach.Invoke();
+		}
 	}
 
 	public void AddScoreByMultiplicator(int value)
