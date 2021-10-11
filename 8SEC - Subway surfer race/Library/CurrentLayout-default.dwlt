@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 579, y: 342}
   m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 26378
+  controlID: 4347
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 303, y: 342}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 26379
+  controlID: 4348
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 303, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 26380
+  controlID: 4349
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 08000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 08000000000000000000000012000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_LastWindowPixelSize: {x: 1920, y: 928}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_LowResolutionForAspectRatios: 01000001000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
 --- !u!114 &13
@@ -404,9 +404,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: eec3e9ff50c4e9ff38c6e9ff6243eaffe043eaffc845eaff0665eaff8465eaff6e67eaffa2e1f2ff06e2f2fff0e3f2ffdca0fdffe0a0fdff5ea9fdff1edbfdff22dbfdff36dbfdffbefaffff6a51000022c70100dac90100f4ca0100
+      m_SelectedIDs: 1c770000
+      m_LastClickedID: 30492
+      m_ExpandedIDs: 30ddffff26e0ffff9675000012760000c6790000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2702,9 +2702,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 12.52, z: 61.370003}
+    m_Target: {x: 0.013858616, y: 2.6214314, z: 61.178726}
     speed: 2
-    m_Value: {x: 0, y: 12.52, z: 61.370003}
+    m_Value: {x: 0.013858616, y: 2.6214314, z: 61.178726}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2751,13 +2751,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.14860971, y: 0.1215858, z: -0.01840806, w: -0.9812279}
+    m_Target: {x: -0.22722425, y: 0.068865895, z: -0.016106626, w: -0.9712816}
     speed: 2
-    m_Value: {x: -0.14860971, y: 0.1215858, z: -0.018408058, w: -0.9812279}
+    m_Value: {x: -0.22722426, y: 0.068865895, z: -0.016106626, w: -0.9712816}
   m_Size:
-    m_Target: 10.822359
+    m_Target: 2.1383226
     speed: 2
-    m_Value: 10.822359
+    m_Value: 2.1383226
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -2821,23 +2821,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/ScriptableObject/Road/Pattern/Easy
+    - Assets/Graph/Low Poly Vehicle pack/Spaceship/Model
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/ScriptableObject/Road/Pattern/Easy
+  - Assets/Graph/Low Poly Vehicle pack/Spaceship/Model
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Soraksis\Documents\GitHub\Car-road-racing\8SEC - Subway
     surfer race
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 138}
-    m_SelectedIDs: d4720000
-    m_LastClickedID: 29396
-    m_ExpandedIDs: 000000002e60000000ca9a3b
+    scrollPos: {x: 0, y: 170}
+    m_SelectedIDs: f4870000
+    m_LastClickedID: 34804
+    m_ExpandedIDs: 000000008486000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2865,7 +2865,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002e60000000ca9a3b
+    m_ExpandedIDs: 000000008486000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2890,9 +2890,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: a486f7ff
-    m_LastClickedInstanceID: -555356
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 1c770000
+    m_LastClickedInstanceID: 30492
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000f0770000365c0000308a00009c780000967200002e72000034700000ea5a00005257000040570000000000004e6e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -3040,7 +3040,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 14970000
     m_LastClickedID: 38676
-    m_ExpandedIDs: 000000002e60000000ca9a3b
+    m_ExpandedIDs: 000000008486000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3068,7 +3068,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002e60000000ca9a3b
+    m_ExpandedIDs: 000000008486000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
