@@ -55,7 +55,7 @@ public class CarController : MonoBehaviour
 	public void ResetPosition()
 	{
 		LaneID = 2;
-	 StartCoroutine(swap.SwapToLine(LaneID));
+		StartCoroutine(swap.SwapToLine(swap.GetLanePosition(LaneID)));
 	}
 
 	public void MoveOnForward(float direction)
@@ -133,7 +133,7 @@ public class CarController : MonoBehaviour
 		IsStraffing = true;
 		RB.useGravity = false;
 
-		yield return StartCoroutine(swap.SwapToLine(LineID));
+		yield return StartCoroutine(swap.SwapToLine(swap.GetLanePosition(LaneID)));
 
 		RB.useGravity = true;
 		IsStraffing = false;
