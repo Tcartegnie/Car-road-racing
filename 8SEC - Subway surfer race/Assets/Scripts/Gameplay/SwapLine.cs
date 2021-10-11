@@ -6,7 +6,7 @@ public class SwapLine : MonoBehaviour
 {
 	public float SwapDuration;
 	public Transform[] LanePosition;
-	public Transform CarTransform;
+	public Transform ModelTransform;
 
 	public AnimationCurve curve;
 
@@ -14,7 +14,7 @@ public class SwapLine : MonoBehaviour
 	public void SetLinePosition(int LaneID)
 	{
 		LaneID = Mathf.Clamp(LaneID, 0, 4);
-		CarTransform.position = GetLanePosition(LaneID);
+		ModelTransform.position = GetLanePosition(LaneID);
 	}
 
 	public Vector3 GetLanePosition(int LaneID)
@@ -23,22 +23,75 @@ public class SwapLine : MonoBehaviour
 		return LanePosition[LaneID].position;
 	}
 
+	public Vector3 GetRandomLanePosition()
+	{
+		return GetLanePosition(Random.Range(0,4));
+	}
+
 	public void GoOnRandomLine()
 	{
-		StartCoroutine(SwapToLine(Random.Range(0,4)));
+		StartCoroutine(SwapToLine(GetRandomLanePosition()));
 	}
 
 
-    public IEnumerator SwapToLine(int LaneID)
+	public void CallStopAllCoroutine()
 	{
-		Vector3 OriginPos = CarTransform.position;
-		Vector3 Destination = GetLanePosition(LaneID);
+		StopAllCoroutines();
+	}
+
+    public IEnumerator SwapToLine(Vector3 Destination)
+	{
+		Vector3 originPos = ModelTransform.position;
+		Vector3 destination = Destination;
 
 		for (float i = 0; i < 1; i += Time.deltaTime / SwapDuration)
 		{
-			CarTransform.position = Vector3.Lerp(new Vector3(OriginPos.x, CarTransform.position.y, OriginPos.z), new Vector3(Destination.x, CarTransform.position.y, OriginPos.z), curve.Evaluate(i));
+			ModelTransform.position = Vector3.Lerp(new Vector3(originPos.x, ModelTransform.position.y, originPos.z), new Vector3(destination.x, ModelTransform.position.y, originPos.z), curve.Evaluate(i));
 			yield return null;
 		}
-		CarTransform.position = Vector3.Lerp(OriginPos, new Vector3(Destination.x, CarTransform.position.y, OriginPos.z), 1);
+		ModelTransform.position = Vector3.Lerp(originPos, new Vector3(destination.x, ModelTransform.position.y, originPos.z), 1);
 	}
+
+	public IEnumerator SwapToLine(Vector3 Destination, float Duration)
+	{
+		Vector3 originPos = ModelTransform.position;
+		Vector3 destination = Destination;
+
+		for (float i = 0; i < 1; i += Time.deltaTime / Duration)
+		{
+			ModelTransform.position = Vector3.Lerp(new Vector3(originPos.x, ModelTransform.position.y, originPos.z), new Vector3(destination.x, ModelTransform.position.y, destination.z), curve.Evaluate(i));
+			yield return null;
+		}
+		ModelTransform.position = Vector3.Lerp(originPos, new Vector3(destination.x, ModelTransform.position.y, destination.z), 1);
+	}
+
+	public IEnumerator SwapToLine(Vector3 Destination, Vector3 offset)
+	{
+		Vector3 originPos = ModelTransform.position;
+		Vector3 destination = Destination;
+
+		for (float i = 0; i < 1; i += Time.deltaTime / SwapDuration)
+		{
+			ModelTransform.position = Vector3.Lerp(new Vector3(originPos.x, ModelTransform.position.y, originPos.z), new Vector3(destination.x + offset.x, ModelTransform.position.y, destination.z + offset.z), curve.Evaluate(i));
+			yield return null;
+		}
+		ModelTransform.position = Vector3.Lerp(originPos, new Vector3(destination.x + offset.x, ModelTransform.position.y, destination.z + offset.z), 1);
+	}
+
+
+
+
+	public IEnumerator SwapToLine(Vector3 Destination, Vector3 offset, float Duration)
+	{
+		Vector3 originPos = ModelTransform.position;
+		Vector3 destination = Destination;
+
+		for (float i = 0; i < 1; i += Time.deltaTime / Duration)
+		{
+			ModelTransform.position = Vector3.Lerp(new Vector3(originPos.x, ModelTransform.position.y, originPos.z), new Vector3(destination.x + offset.x, ModelTransform.position.y, destination.z + offset.z), curve.Evaluate(i));
+			yield return null;
+		}
+		ModelTransform.position = Vector3.Lerp(originPos, new Vector3(destination.x + offset.x, ModelTransform.position.y, destination.z + offset.z), 1.0f);
+	}
+
 }
