@@ -272,6 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotationSpeed: 0.5
   ObjetTR: {fileID: 2618128004861282813}
+  movingObj: {fileID: 3039982169022114480}
   TravellingTime: 0.1
   ObjectHeight: 2
   TimeOnPlayerTop: 1
@@ -279,6 +280,7 @@ MonoBehaviour:
   Audiosource: {fileID: 8882971752371703154}
   ObjectName: Multiplicator
   RB: {fileID: 837873325991889033}
+  collider: {fileID: 4258192482171756581}
   MultiplicatorValue: 2
 --- !u!65 &6086251611241467724
 BoxCollider:

@@ -4993,6 +4993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotationSpeed: 3
   ObjetTR: {fileID: 6766067000131130248}
+  movingObj: {fileID: 6801735825531983039}
   TravellingTime: 0.2
   ObjectHeight: 2
   TimeOnPlayerTop: 1
@@ -5000,6 +5001,7 @@ MonoBehaviour:
   Audiosource: {fileID: 8646618907489115607}
   ObjectName: Heart
   RB: {fileID: 9031099827109476536}
+  collider: {fileID: 4572687783848469919}
 --- !u!135 &2248057265325022078
 SphereCollider:
   m_ObjectHideFlags: 0

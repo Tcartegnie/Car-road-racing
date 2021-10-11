@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotationSpeed: 1
   ObjetTR: {fileID: 4744182841465442317}
+  movingObj: {fileID: 2729726564670149224}
   TravellingTime: 4
   ObjectHeight: 3
   TimeOnPlayerTop: 2
@@ -185,6 +186,7 @@ MonoBehaviour:
   Audiosource: {fileID: 2942360568670306485}
   ObjectName: Invulnerability
   RB: {fileID: 2348019936510942518}
+  collider: {fileID: 6116586781010888846}
 --- !u!65 &5714909063516456722
 BoxCollider:
   m_ObjectHideFlags: 0
