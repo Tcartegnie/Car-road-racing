@@ -5,28 +5,58 @@ using UnityEngine;
 public class FlyingGifterController : MonoBehaviour
 {
     Chrono chrono;
+    Chrono Duration;
+
+	public float SwapCooldown;
+	public float FlyingDuration;
+
+	public float MaxCoolDown;
+	public float MinCoolDown;
+
+	public float EntranceDuration;
 	public SwapLine swap;
 	public int RandomRate;
 	public BonusSpawner spawner;
 
+	bool EnableBehaviour;
+
 	public void Start()
 	{
-		chrono = new Chrono (10.0f);
+		chrono = new Chrono (SwapCooldown);
 		chrono.OnEndChrono += OnEndChrono;
+		
+
+		Duration = new Chrono(FlyingDuration);
+		Duration.OnEndChrono += CallExit;
+		
+
+		EnableBehaviour = false;
+	}
+
+	void EnableGiftDistrubution()
+	{
 		chrono.StartChrono();
+		Duration.StartChrono();
+		EnableBehaviour = true;
 	}
 
 	public void Update()
 	{
-		chrono.PlayChrono();
+	
+		if (EnableBehaviour)
+		{
+			Duration.PlayChrono();
+			chrono.PlayChrono();
+		}
+
 	}
 
 	public void SpawnRandomObject()
 	{
 		if(Random.Range(0,100) <= RandomRate)
 		{
-		GameObject GO =	spawner.SpawnBonusOnPosition();
-		GO.GetComponentInChildren<CollectibleObject>().EnableGravity();
+			GameObject GO =	spawner.SpawnBonusOnPosition();
+			GO.GetComponentInChildren<CollectibleObject>().EnableGravity();
 		}
 	}
 
@@ -37,9 +67,34 @@ public class FlyingGifterController : MonoBehaviour
 
 	public void OnEndChrono()
 	{
-		SpawnRandomObject();
-		SwapOnRandomLine();
-		chrono.StartChrono();
+		if (EnableBehaviour)
+		{
+			SpawnRandomObject();
+			SwapOnRandomLine();
+			chrono.StartChrono();
+		}
 	}
 
+	public void CallEntranceInScene()
+	{
+		StartCoroutine(Entrance());
+	}
+
+	public void CallExit()
+	{
+		swap.CallStopAllCoroutine();
+		StartCoroutine(Exit());
+	}
+
+	public IEnumerator Entrance()
+	{
+		yield return StartCoroutine(swap.SwapToLine(swap.GetRandomLanePosition(),new Vector3(0,0,100),EntranceDuration));
+		EnableGiftDistrubution();
+	}
+
+	public IEnumerator Exit()
+	{
+		EnableBehaviour = false;
+		yield return StartCoroutine(swap.SwapToLine(new Vector3(0,30f,20f), EntranceDuration));
+	}
 }
