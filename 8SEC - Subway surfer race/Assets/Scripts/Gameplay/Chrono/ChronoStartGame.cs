@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ChronoStartGame : MonoBehaviour
 {
+	public FlyingGifterController flyingGifter;
 	public ChronoStartScreen ChronoStartScreen;
 	public FloorSpawner FloorSpawner;
 	public CarStat state;
