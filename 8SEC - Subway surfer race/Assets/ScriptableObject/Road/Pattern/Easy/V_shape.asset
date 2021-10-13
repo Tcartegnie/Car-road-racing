@@ -157,4 +157,4 @@ MonoBehaviour:
     Train: 0000000000
     IsCoinSpawner: 0000000000
     Bonus: 0000000000
-  difficulty: 0
+  difficulty: 1
