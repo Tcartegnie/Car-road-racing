@@ -7,6 +7,9 @@ public class FlyingGifterController : MonoBehaviour
     Chrono chrono;
     Chrono Duration;
 
+	public FlyingGifterAnimation animations;
+	public FlyingGifterParticle particles;
+
 	public float SwapCooldown;
 	public float FlyingDuration;
 
@@ -88,8 +91,13 @@ public class FlyingGifterController : MonoBehaviour
 
 	public IEnumerator Entrance()
 	{
+		particles.EnableParticle();
+
+		animations.PlayTurnAround();
 		yield return StartCoroutine(swap.SwapToLine(swap.GetRandomLanePosition(),new Vector3(0,0,100),EntranceDuration));
 		EnableGiftDistrubution();
+
+		particles.DiseableaParticle();
 	}
 
 	public IEnumerator Exit()
