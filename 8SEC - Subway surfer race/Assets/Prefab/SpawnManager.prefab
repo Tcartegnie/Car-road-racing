@@ -1,0 +1,220 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3431724503625470398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3431724503625470392}
+  - component: {fileID: 3431724503625470393}
+  - component: {fileID: 3431724503625470395}
+  m_Layer: 0
+  m_Name: FloorSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3431724503625470392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431724503625470398}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -14.1, z: -17.990988}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3431724504414372987}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3431724503625470393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431724503625470398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc27e608d461094484d7c183e9d205e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EmptyPattern:
+    name: []
+    Train: 
+    IsCoinSpawner: 
+    Bonus: 
+  Roadlist: {fileID: 11400000, guid: 9e701a1073742bc4890e8bab344f5a37, type: 2}
+  bonusList: {fileID: 11400000, guid: c7bb3e6e294b03e42ae45979d57ee0a9, type: 2}
+  score: {fileID: 0}
+  Difficultymanager: {fileID: 3431724503625470395}
+  EmptyRoadPattern: {fileID: 2144760973106773559, guid: 995439ba14f6506409edb50ffddbd78b,
+    type: 3}
+  RoadSpawnPoint: {fileID: 3431724504140167293}
+  SpawnCamionEnable: 0
+  SpawnCoinEnable: 0
+  SpawnBonusEnable: 0
+  SpawnBuildEnable: 0
+  SpawnRoadNumber: 20
+  RoadSpeed: 60
+  RoadDistance: 16
+  DistanceMaxFromStart: 0
+  Roads: []
+--- !u!114 &3431724503625470395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431724503625470398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 860d685b8cde61c4ea7683c5b36c64bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 0}
+  floorSpawner: {fileID: 3431724503625470393}
+  NormalDifficultyMax: 1000
+  HardDifficultyMax: 2000
+--- !u!1 &3431724504140167282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3431724504140167293}
+  m_Layer: 0
+  m_Name: RoadSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3431724504140167293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431724504140167282}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -15.1, z: 22.009014}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3431724504414372987}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3431724504414372984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3431724504414372987}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3431724504414372987
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431724504414372984}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.00001168251, y: 14.100025, z: 17.990986}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3431724504518671578}
+  - {fileID: 3431724503625470392}
+  - {fileID: 3431724504140167293}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3431724504518671579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3431724504518671578}
+  - component: {fileID: 3431724504518671397}
+  m_Layer: 0
+  m_Name: ObjectPooler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3431724504518671578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431724504518671579}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -14.1, z: -17.990988}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3431724504414372987}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3431724504518671397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3431724504518671579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a431ebb41df6d504f8998fdc9827df54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PoolObject:
+  - poolName: Coin
+    Size: 250
+    prefab: {fileID: 8723741861506948335, guid: 3d12602baa2b7c9479b6a955ae3d46a1,
+      type: 3}
+  - poolName: Heart
+    Size: 50
+    prefab: {fileID: 7524483001920852230, guid: 74c1ff60028c62d4aa7384603942b864,
+      type: 3}
+  - poolName: Building1
+    Size: 50
+    prefab: {fileID: 919132149155446097, guid: 47464c7f705ae794cb2563bc41a7d071, type: 3}
+  - poolName: Building2
+    Size: 50
+    prefab: {fileID: 919132149155446097, guid: 8553e34f2fa8a594089f2e35f8bdf1c1, type: 3}
+  - poolName: Ramp
+    Size: 10
+    prefab: {fileID: 2912486430396176467, guid: a93df2b79f2209c42a7c0b591dfe7842,
+      type: 3}
+  - poolName: Train
+    Size: 100
+    prefab: {fileID: 6321693784303595359, guid: 2aa5efc19ffa4c24aa94de5a87eeda8f,
+      type: 3}
+  - poolName: Multiplicator
+    Size: 60
+    prefab: {fileID: 4879233398744250382, guid: f4c29d9d9c1b36e44ae49c8664ecb373,
+      type: 3}
+  - poolName: Invulnerability
+    Size: 60
+    prefab: {fileID: 3924143041662977942, guid: 6d1475e76dd8f9748a0152bfaa092a85,
+      type: 3}
