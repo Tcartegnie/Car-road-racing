@@ -15,13 +15,13 @@ public class FloorSpawner : MonoBehaviour
 	public Transform RoadSpawnPoint;
 
 	[Space]
-	public int SpawnRoadNumber;
 	public bool SpawnCamionEnable;
 	public bool SpawnCoinEnable;
 	public bool SpawnBonusEnable;
-	public bool GenerateBuild;
+	public bool SpawnBuildEnable;
 
 	[Space]
+	public int SpawnRoadNumber;
 	public float RoadSpeed;
 	public float RoadDistance;
 	public float DistanceMaxFromStart;
@@ -137,7 +137,7 @@ public class FloorSpawner : MonoBehaviour
 	}
 	public void ResetRoadPattern(int segementID)
 	{
-		if (GenerateBuild)
+		if (SpawnBuildEnable)
 		{
 			Road CurrentRoad = Roads[segementID];
 			CurrentRoad.ChangeRoadPattern();

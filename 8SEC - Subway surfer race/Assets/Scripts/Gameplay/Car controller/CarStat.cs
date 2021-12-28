@@ -28,10 +28,6 @@ public class CarStat : MonoBehaviour
 		carCinematiqueMovement.CallTransitionIn();
 	}
 
-	public void SetCarInvicible()
-	{
-		
-	}
 	public void InitCar()
 	{
 		score.Multiplicator = 1;
