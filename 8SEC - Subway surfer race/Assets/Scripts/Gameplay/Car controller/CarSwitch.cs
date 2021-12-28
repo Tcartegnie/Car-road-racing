@@ -13,17 +13,20 @@ public class CarSwitch : MonoBehaviour
     [SerializeField]
     CarStat carState;
     [SerializeField]
+    CarSoundPlayer soundPlayer;
+    [SerializeField]
     CarController carController;
 
-    public void CallCarChangement(GameObject NewVehicule)
+    public void CallCarChangement(CarData data)
 	{
-        StartCoroutine(SwitchFromCar(NewVehicule));
+        StartCoroutine(SwitchFromCar(data));
 	}
 
-    void InstanciateNewVehicule(GameObject NewVehicule)
+    void InstanciateNewVehicule(CarData data)
 	{
         GameObject GO = CurrentVehicule;
-        CurrentVehicule = Instantiate(NewVehicule,CarTransform);
+        CurrentVehicule = Instantiate(data.GameObject,CarTransform);
+        SetCarSound(data);
         SetParticleEmmiter();
         Destroy(GO);
 	}
@@ -35,10 +38,16 @@ public class CarSwitch : MonoBehaviour
         carController.CarParticleEmmiter = ParticleEmmiter;
     }
 
-    IEnumerator SwitchFromCar(GameObject NewVehicule)
+    public void SetCarSound(CarData data)
+	{
+        CarSoundPlayer SoundPlayer = CurrentVehicule.GetComponent<CarSoundPlayer>();
+        soundPlayer.list = data.Soundlist;
+	}
+
+    IEnumerator SwitchFromCar(CarData data)
 	{
         yield return StartCoroutine(tranistion.CarTransitionOut());
-        InstanciateNewVehicule(NewVehicule);
+        InstanciateNewVehicule(data);
         yield return StartCoroutine(tranistion.CarTransitionIn());
     }
 }

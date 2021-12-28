@@ -103,7 +103,7 @@ public class ShopMenu : MonoBehaviour
 
 	public void SelectCar()
 	{
-		carSwitch.CallCarChangement(GetCurrentCarData().GameObject);
+		carSwitch.CallCarChangement(GetCurrentCarData());
 	}
 
 	public void BuyCar()

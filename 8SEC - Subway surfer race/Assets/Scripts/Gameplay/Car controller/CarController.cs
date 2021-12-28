@@ -33,14 +33,11 @@ public class CarController : MonoBehaviour
 	public bool OnGround;
 	public CarParticleEmmiter CarParticleEmmiter;
 
-	public AudioClip SkiddingSound;
-	public AudioClip OnAirStraff;
-	public AudioClip JumpSound;
-	public AudioSource SoundSource;
-
 	public MainMenuUI menu;
 
 	public SwapLine swap;
+
+	public CarSoundPlayer SoundPlayer;
 
 	public void Start()
 	{
@@ -74,12 +71,6 @@ public class CarController : MonoBehaviour
 		}
 	}
 
-	
-	public void OnTouchingGround()
-	{
-		SoundSource.Play();
-	}
-
 
 	public void Straff(int direction)
 	{
@@ -96,7 +87,7 @@ public class CarController : MonoBehaviour
 	{
 		if (OnGround)
 		{
-			SoundSource.PlayOneShot(JumpSound);
+			SoundPlayer.PlayJumpSound();
 			RB.AddForce(Vector3.up * jumpForce);
 		}
 	}
@@ -117,12 +108,11 @@ public class CarController : MonoBehaviour
 	{
 		if(OnGround)
 		{
-			SoundSource.PlayOneShot(OnAirStraff);
-			SoundSource.PlayOneShot(SkiddingSound);
+			SoundPlayer.PlayStraffSound();
 		}
 		else
 		{
-			SoundSource.PlayOneShot(OnAirStraff);
+			SoundPlayer.PlayAirStraffSound();
 		}
 	}
 
@@ -138,8 +128,4 @@ public class CarController : MonoBehaviour
 		RB.useGravity = true;
 		IsStraffing = false;
 	}
-
-	
-
-
 }
