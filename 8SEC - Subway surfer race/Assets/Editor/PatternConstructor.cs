@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEditor;
 using UnityEngine;
-
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 /*
  1 - Ajouter la possiblilité de mettre différent trains (genre la rampe)
@@ -34,13 +33,14 @@ public class PatternConstructor : EditorWindow
 	List<bool[]> BonusConfirmed = new List<bool[]>();
 	List<TrainType[]> trainTypes = new List<TrainType[]>();
 
-	string[] DifficultyName = new string[3] {"Easy","Normal","Hard"};
+	string[] DifficultyName = new string[3] { "Easy", "Normal", "Hard" };
+
 
 	[MenuItem("Tools/Pattern constructor")]
 	static void Init()
 	{
+		EditorSceneManager.OpenScene("Assets/Scenes/PatternEditorWorkBench.unity");
 		PatternConstructor window = (PatternConstructor)GetWindow(typeof(PatternConstructor), true, "Patter constructor");
-	
 		window.Show();
 	}
 
@@ -126,12 +126,12 @@ public class PatternConstructor : EditorWindow
 
 	public void CreatAssets()
 	{
-		RoadPattern pattern = CreateInstance<RoadPattern>();
+		//RoadPattern pattern = CreateInstance<RoadPattern>();
 		for (int i = 0; i < TrainConfirmed.Count; i++)
 		{
-			pattern.MakeSegment(difficulty,trainTypes[i],TrainConfirmed[i], CoinsConfirmed[i], BonusConfirmed[i]);
+			//pattern.MakeSegment(difficulty,trainTypes[i],TrainConfirmed[i], CoinsConfirmed[i], BonusConfirmed[i]);
 		}
-		AssetDatabase.CreateAsset(pattern, "Assets/ScriptableObject/Road/Pattern/"+DifficultyName[(int)difficulty] +"/"+ FileName +".asset");
+		//AssetDatabase.CreateAsset(pattern, "Assets/ScriptableObject/Road/Pattern/"+DifficultyName[(int)difficulty] +"/"+ FileName +".asset");
 		AssetDatabase.SaveAssets();
 	}
 }

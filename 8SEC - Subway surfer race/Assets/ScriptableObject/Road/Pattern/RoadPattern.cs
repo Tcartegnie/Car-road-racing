@@ -1,9 +1,10 @@
-using System.Collections;
+
+using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
-[CreateAssetMenu(fileName = "Road pattern", menuName = "ScriptableObjects/Road/pattern", order = 1)]
-public class RoadPattern : ScriptableObject
+
+[Serializable]
+public class RoadPattern 
 {
 	public List<RoadSegements> segments = new List<RoadSegements>();
 	public SegementDifficulty difficulty;
@@ -18,5 +19,16 @@ public class RoadPattern : ScriptableObject
 	public void AddSegements(RoadSegements segment)
 	{
 		segments.Add(segment);
+	}
+
+	public void SaveSegement()
+	{
+		JsonUtility.FromJsonOverwrite(Application.dataPath,segments);
+	}
+
+	public List<RoadSegements> LoadPattern(string name)
+	{
+		var list =	JsonUtility.FromJson<List<RoadSegements>>(Application.dataPath + name);
+		return list;
 	}
 }
