@@ -17,10 +17,10 @@ public class RoadSegements
 
 	public RoadSegements()
 	{
-		Train = new bool[0];
-		IsCoinSpawner = new bool[0];
-		Bonus = new bool[0];
-		name = new string[0];
+		Train = new bool[5];
+		IsCoinSpawner = new bool[5];
+		Bonus = new bool[5];
+		name = new string[5];
 	}
 
 	public RoadSegements(TrainType [] name,bool[] spawns, bool[] isCoinSpawner, bool[]bonus)
