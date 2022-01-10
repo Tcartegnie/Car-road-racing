@@ -9,7 +9,7 @@ public class PatternManager
     SegementDifficulty currentDifficulty = SegementDifficulty.Easy;
     RoadPattern CurrentPatterns;
     RoadSegements EmptyPattern;
-
+    bool InEditor;
 	public PatternManager(RoadList trainList, RoadSegements emptyPattern)
 	{
 		TrainList = trainList;
@@ -17,6 +17,11 @@ public class PatternManager
 	}
 
 	public SegementDifficulty CurrentDifficulty { get => currentDifficulty; set => currentDifficulty = value; }
+
+    public void SetEditorMode(bool State)
+	{
+        InEditor = State;
+	}
 
 	public void SetTrainList(RoadList List)
 	{
