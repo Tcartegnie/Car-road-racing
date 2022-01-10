@@ -15,24 +15,30 @@ public class DifficultyManager : MonoBehaviour
     SegementDifficulty currentDifficulty = SegementDifficulty.Easy;
     void Update()
 	{
-		CheckDifficulty();
-		floorSpawner.SetDifficulty(GetDifficulty());
+		if (!floorSpawner.InEditor)
+		{
+			CheckDifficulty();
+			floorSpawner.SetDifficulty(GetDifficulty());
+		}
 	}
 
 	private void CheckDifficulty()
 	{
-		int currentScore = score.GetScore();
-		if (currentScore < NormalDifficultyMax)
+		if (!floorSpawner.InEditor)
 		{
-			currentDifficulty = SegementDifficulty.Easy;
-		}
-		else if (currentScore < HardDifficultyMax)
-		{
-			currentDifficulty = SegementDifficulty.Normal;
-		}
-		else
-		{
-			currentDifficulty = SegementDifficulty.Hard;
+			int currentScore = score.GetScore();
+			if (currentScore < NormalDifficultyMax)
+			{
+				currentDifficulty = SegementDifficulty.Easy;
+			}
+			else if (currentScore < HardDifficultyMax)
+			{
+				currentDifficulty = SegementDifficulty.Normal;
+			}
+			else
+			{
+				currentDifficulty = SegementDifficulty.Hard;
+			}
 		}
 	}
 
