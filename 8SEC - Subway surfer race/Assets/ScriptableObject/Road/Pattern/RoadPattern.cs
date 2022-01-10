@@ -6,14 +6,20 @@ using UnityEngine;
 [Serializable]
 public class RoadPattern 
 {
+	public string PatternName;
 	public List<RoadSegements> segments = new List<RoadSegements>();
 	public SegementDifficulty difficulty;
 
-	public void MakeSegment(SegementDifficulty difficulty,TrainType [] names,bool[] trains, bool[] coins,bool[]Bonus)
+	public void MakeSegment(TrainType [] names,bool[] trains, bool[] coins,bool[]Bonus)
 	{
-		this.difficulty = difficulty;
-		RoadSegements segement = new RoadSegements(names, trains,coins, Bonus);
+		RoadSegements segement = CreateSegement(names, trains, coins, Bonus);
 		AddSegements(segement);
+	}
+
+	private RoadSegements CreateSegement(TrainType[] names, bool[] trains, bool[] coins, bool[] Bonus)
+	{
+		RoadSegements segement = new RoadSegements(names, trains, coins, Bonus);
+		return segement;
 	}
 
 	public void AddSegements(RoadSegements segment)
@@ -23,12 +29,12 @@ public class RoadPattern
 
 	public void SaveSegement()
 	{
-		JsonUtility.FromJsonOverwrite(Application.dataPath,segments);
+		JsonUtility.FromJsonOverwrite(Application.persistentDataPath +"/"+ PatternName, segments);
 	}
 
-	public List<RoadSegements> LoadPattern(string name)
+	public List<RoadSegements> LoadPattern(string patternName)
 	{
-		var list =	JsonUtility.FromJson<List<RoadSegements>>(Application.dataPath + name);
+		var list =	JsonUtility.FromJson<List<RoadSegements>>(Application.persistentDataPath + "/.*");
 		return list;
 	}
 }
