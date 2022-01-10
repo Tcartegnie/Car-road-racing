@@ -33,15 +33,28 @@ public class FloorSpawner : MonoBehaviour
 
 	PatternManager patternManager;
 
-	
+
+	public bool InEditor;
+
 	public void Start()
 	{
-		patternManager = new PatternManager(Roadlist, EmptyPattern);
-		patternManager.SetTrainList(Roadlist);
-		InitSpawn();
+		if (!InEditor)
+		{
+			patternManager = new PatternManager(Roadlist, EmptyPattern);
+			patternManager.SetTrainList(Roadlist);
+			InitSpawn();
+		}
 	}
 
 	public void Update()
+	{
+		if (!InEditor)
+		{
+			CheckRoad();
+		}
+	}
+
+	private void CheckRoad()
 	{
 		for (int i = 0; i < Roads.Count; i++)
 		{
@@ -67,24 +80,23 @@ public class FloorSpawner : MonoBehaviour
 		LastRoad = transform;
 		for (int j = 0; j < SpawnRoadNumber-1; j++)
 		{
-			SpawnNewSegement();
+			SpawnNewSegement(LastRoad.transform.position + (transform.forward * RoadDistance));
 		}
 	}
-
 	
-
-	public void SpawnNewSegement()
+	public GameObject SpawnNewSegement(Vector3 PatternPosition)
 	{
 		GameObject GO; 
 		GO = Instantiate(EmptyRoadPattern);
-		GO.transform.position = LastRoad.transform.position + ((transform.forward * RoadDistance));
+		GO.transform.position = PatternPosition;
 		GO.transform.rotation = new Quaternion();
 		GO.GetComponent<Road>().SetBonusList(bonusList);
 		//GO.GetComponent<Road>().InitRaod(score);
 		GO.GetComponent<MovingObject>().speed = RoadSpeed;
-		GO.GetComponent<MovingObject>().CanMove = true;
+		GO.GetComponent<MovingObject>().CanMove = !InEditor;
 		Roads.Add(GO.GetComponent<Road>());
 		LastRoad = GO.transform;
+		return GO;
 	}
 
 	public void EnableMoveRoad()
@@ -168,7 +180,7 @@ public class FloorSpawner : MonoBehaviour
 	{
 		if (SpawnCamionEnable)
 		{
-			road.GenerateTrain(segement);
+			road.GenerateTrains(segement);
 		}
 	}
 	
@@ -193,8 +205,4 @@ public class FloorSpawner : MonoBehaviour
 		SpawnCoinsSegement(road, segement);
 		SpawnBonusSegement(road, segement);
 	}
-
-
-
-
 }

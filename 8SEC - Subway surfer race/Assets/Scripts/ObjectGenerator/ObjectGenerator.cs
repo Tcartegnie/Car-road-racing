@@ -33,14 +33,25 @@ public class ObjectGenerator : MonoBehaviour
 		GO.transform.SetParent(spawn);
 		return GO;
 	}
+	
+	public Vector3 GetLanePositon(int SpawnID)
+	{
+		return Spawns[SpawnID].position;
+	}
 
-	public void RemoveObject()
+	public void RemoveObjects()
 	{
 		for(int i = 0; i < CurrentObjects.Count;i++)
 		{
-			CurrentObjects[i].SetActive(false);
-			CurrentObjects[i].transform.SetParent(null);
+			RemoveObject(CurrentObjects[i]);
 		}
 		CurrentObjects.Clear();
 	}
+
+	public void RemoveObject(GameObject obj)
+	{
+		obj.SetActive(false);
+		obj.transform.SetParent(null);
+	}
+
 }

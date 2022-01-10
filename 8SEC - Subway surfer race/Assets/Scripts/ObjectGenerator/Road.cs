@@ -29,9 +29,7 @@ public class Road : MonoBehaviour
 	}
 	public void ChangeRoadPattern()
 	{	
-		
-			ConstructRoad();
-
+		ConstructRoad();
 	}
 
 	public void ClearAll()
@@ -42,13 +40,13 @@ public class Road : MonoBehaviour
 
 	public void ClearPattern()
 	{
-		coinGenerator.RemoveObject();
-		bonusgGenerator.RemoveObject();
-		trainGenerator.RemoveObject();
+		coinGenerator.RemoveObjects();
+		bonusgGenerator.RemoveObjects();
+		trainGenerator.RemoveObjects();
 	}
 	public void ClearBuilding()
 	{
-		buildingGenerator.RemoveObject();
+		buildingGenerator.RemoveObjects();
 	}
 
 	public void ConstructRoad()
@@ -56,7 +54,17 @@ public class Road : MonoBehaviour
 		GenerateBuilding();	
 	}
 
-	public void GenerateTrain(RoadSegements segement)
+	public void RemoveTrain(int LaneID)
+	{
+		trainGenerator.RemoveTrain(LaneID);
+	}
+
+	public GameObject GenerateTrain(int LaneID)
+	{
+		return trainGenerator.GenerateTrain(LaneID);
+	}
+
+	public void GenerateTrains(RoadSegements segement)
 	{
 		trainGenerator.GenerateTrainSegement(segement);
 	}
@@ -74,4 +82,10 @@ public class Road : MonoBehaviour
 	{
 		buildingGenerator.GenerateBuilding();
 	}
+
+	public Vector3 GetTrainSpawnerPosition(int LaneID)
+	{
+		return trainGenerator.GetLanePositon(LaneID);
+	}
+	
 }
